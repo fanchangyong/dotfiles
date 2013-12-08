@@ -252,11 +252,11 @@ set laststatus=2
 
 " Format the status line
 "set statusline=FileName:[%{HasPaste()}%F%m%r%h]\ %w\ CWD:[%r%{getcwd()}%h]\ Line:[%l/%L]
-set stl=FileName:[%F]\ 
-set stl+=FileType:%y\ 
+set stl=Path:[%F]\ 
+set stl+=FT:%y\ 
 set stl+=%(\ [%M%R%H%W]%)\ 
-set stl+=Byte:[%b/0x%B]\ 
-set stl+=Line:[%l/%L\ %%%p]\ 
+"set stl+=Byte:[%b/0x%B]\ 
+set stl+=Line:[%l/%L]\ 
 set stl+=Col:[%c]\ 
 set stl+=%{HasPaste()}
 
