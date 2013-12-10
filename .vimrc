@@ -291,10 +291,16 @@ func! DeleteTrailingWS()
   exe "normal `z"
 endfunc
 
+" Call Erlang compiler on current file
+func! ExecuteErlc()
+	execute "!make" 
+endfunc
+
 augroup buf_write_cmd
 	autocmd!
 	autocmd BufWrite *.py :call DeleteTrailingWS()
 	autocmd BufWrite *.coffee :call DeleteTrailingWS()
+	"autocmd BufWrite *.erl :call ExecuteErlc()
 augroup END
 
 
@@ -487,7 +493,7 @@ onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
 
 cabbrev h tab help
-augroup help_ft_cmd
+augroup ft_cmd
 	autocmd!
 	autocmd FileType help set rnu
 augroup END
