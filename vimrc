@@ -426,7 +426,7 @@ endfunction
 " For Vundle
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
-"Bundle "Valloric/YouCompleteMe"
+Bundle "fanchangyong/YouCompleteMe"
 Bundle "scrooloose/nerdtree"
 "Bundle "minibufexplorerpp"
 Bundle "cocoa.vim"

@@ -1,5 +1,5 @@
 PWD=`pwd`
 echo $PWD
-ln -s "$PWD/.bash_profile" ~/.bash_profile
-ln -s "$PWD/.vimrc" ~/.vimrc
-ln -s "$PWD/.tmux.conf" ~/.tmux.conf
+ln -F -s "$PWD/bash_profile" ~/.bash_profile
+ln -F -s "$PWD/vimrc" ~/.vimrc
+ln -F -s "$PWD/tmux.conf" ~/.tmux.conf
