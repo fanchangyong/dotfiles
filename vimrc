@@ -311,7 +311,7 @@ augroup END
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
 " Open vimgrep and put the cursor in the right position
-noremap <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+noremap <leader>g :grep // **/*.<left><left><left><left><left><left><left>
 
 " Vimgreps in the current file
 noremap <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
@@ -426,7 +426,7 @@ endfunction
 " For Vundle
 set rtp+=~/.vim/vundle.git/
 call vundle#rc()
-Bundle "fanchangyong/YouCompleteMe"
+"Bundle "fanchangyong/YouCompleteMe"
 Bundle "scrooloose/nerdtree"
 "Bundle "minibufexplorerpp"
 Bundle "cocoa.vim"
@@ -493,6 +493,7 @@ onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
 
 cabbrev h tab help
+cabbrev help tab help
 augroup ft_cmd
 	autocmd!
 	autocmd FileType help set rnu
@@ -514,3 +515,6 @@ nnoremap <leader>6 6<c-^>
 nnoremap <leader>7 7<c-^>
 nnoremap <leader>8 8<c-^>
 nnoremap <leader>9 9<c-^>
+
+nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
+nnoremap <c-t> <c-o>
