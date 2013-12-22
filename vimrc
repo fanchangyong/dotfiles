@@ -516,5 +516,6 @@ nnoremap <leader>7 7<c-^>
 nnoremap <leader>8 8<c-^>
 nnoremap <leader>9 9<c-^>
 
-nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
-nnoremap <c-t> <c-o>
+"nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
+"nnoremap <c-t> <c-o>
+
