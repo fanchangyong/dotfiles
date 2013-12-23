@@ -1,4 +1,13 @@
 # vim: ft=sh
+
+SCRIPT=${BASH_SOURCE[0]}
+if [[ -h $SCRIPT ]]
+then
+	DOTFILE_DIR=$(dirname $(readlink ${BASH_SOURCE[0]}))
+else
+	DOTFILE_DIR=$(dirname ${BASH_SOURCE[0]})
+fi
+
 os=`uname -s`
 
 if [[ $os = "Darwin" ]]
@@ -9,7 +18,6 @@ then
 	ls_color="--color"
 fi
 
-echo "ls_color:${ls_color}"
 
 alias ls="ls ${ls_color}"
 alias grep="grep --color=auto -n"
@@ -18,10 +26,13 @@ alias mk=make
 alias vi=vim
 alias l=ls
 alias ll="ls -l ${ls_color}"
-alias .=". ~/.bash_profile"
-alias tmux="tmux attach"
+alias .="source ~/.bash_profile"
+alias .g="source $DOTFILE_DIR/gitconf.sh"
+alias tma="tmux attach"
 alias tm=tmux
 alias eb="vim ~/.bash_profile" # Edit bash profile
+alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
+alias diff=colordiff
 
 alias ..="cd ../"
 alias ...="cd ../../"
@@ -30,7 +41,7 @@ alias .....="cd ../../../../"
 alias -- -="cd -"
 alias cd..="cd ../"
 
-alias dot="cd ~/git/dotfiles"
+alias dot="cd $DOTFILE_DIR"
 
 
 PS1_COLOR="\e[0;35m"
@@ -43,3 +54,4 @@ PATH="/usr/local/bin:$PATH"
 
 export PS1
 export PATH
+export DOTFILE_DIR
