@@ -1,3 +1,4 @@
+# vim: ft=sh
 os=`uname -s`
 if [[ os == "Darwin" ]]
 then
@@ -7,21 +8,23 @@ then
 	ls_color="--color"
 fi
 
-alias "ls=ls ${ls_color}"
-alias "grep=grep --color=auto -n"
-alias "erlm='erl -man'"
-alias "mk=make"
-alias "vi=vim"
-alias "l=ls"
-alias "ll='ls -l ${ls_color}'"
-alias ".=. ~/.bash_profile"
-alias "tmux=tmux attach"
+alias ls="ls ${ls_color}"
+alias grep="grep --color=auto -n"
+alias erlm="erl -man"
+alias mk=make
+alias vi=vim
+alias l=ls
+alias ll="ls -l ${ls_color}"
+alias .=". ~/.bash_profile"
+alias tmux="tmux attach"
 
-alias "..='cd ..'"
-alias "...='cd ...'"
-alias "....='cd ....'"
-alias ".....='cd ....."
-alias "--='cd -'"
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
+alias .....="cd ../../../../"
+alias -- -="cd -"
+
+alias dot="cd ~/git/dotfiles"
 
 
 PS1_COLOR="\e[0;35m"
