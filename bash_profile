@@ -8,6 +8,12 @@ alias "ll='ls -lG'"
 alias ".=. ~/.bash_profile"
 alias "tmux=tmux attach"
 
+alias "..='cd ..'"
+alias "...='cd ...'"
+alias "....='cd ....'"
+alias ".....='cd ....."
+alias "--='cd -'"
+
 
 PS1_COLOR="\e[0;35m"
 PS1_COLOR_END="\e[m"
