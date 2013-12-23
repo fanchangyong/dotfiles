@@ -11,3 +11,14 @@ then
 		`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
 	fi
 fi
+
+cmds=(ack tree ctags sl fortune cowsay colordiff tree)
+
+for cmd in "${cmds[@]}"
+do
+	if [[ -z `which $cmd` ]]
+	then
+		echo "### Installing $cmd"
+		brew install $cmd
+	fi
+done
