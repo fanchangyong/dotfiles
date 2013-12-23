@@ -1,12 +1,15 @@
 # vim: ft=sh
 os=`uname -s`
-if [[ os == "Darwin" ]]
+
+if [[ $os = "Darwin" ]]
 then
 	ls_color="-G"
-elif [[ os == "Linux" ]]
+elif [[ $os = "Linux" ]]
 then
 	ls_color="--color"
 fi
+
+echo "ls_color:${ls_color}"
 
 alias ls="ls ${ls_color}"
 alias grep="grep --color=auto -n"
@@ -17,12 +20,15 @@ alias l=ls
 alias ll="ls -l ${ls_color}"
 alias .=". ~/.bash_profile"
 alias tmux="tmux attach"
+alias tm=tmux
+alias eb="vim ~/.bash_profile" # Edit bash profile
 
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
 alias -- -="cd -"
+alias cd..="cd ../"
 
 alias dot="cd ~/git/dotfiles"
 
