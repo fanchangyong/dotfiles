@@ -33,6 +33,8 @@ alias tm=tmux
 alias eb="vim ~/.bash_profile" # Edit bash profile
 alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
 alias diff=colordiff
+alias df="df -h"
+alias g=git
 
 alias ..="cd ../"
 alias ...="cd ../../"

@@ -5,8 +5,8 @@ ln -f -s "$PWD/vimrc" ~/.vimrc
 ln -f -s "$PWD/tmux.conf" ~/.tmux.conf
 
 os=`uname -s`
-if [[ os=="Linux" ]]
+if [[ os="Linux" ]]
 then
-	cat $PWD/bashrc >> ~/.bashrc
+	ln -s "$PWD/bashrc" ~/.bashrc
 fi
 
