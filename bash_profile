@@ -35,6 +35,11 @@ alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
 alias diff=colordiff
 alias df="df -h"
 alias g=git
+alias c='clear'
+alias quit='exit'
+alias q='exit'
+alias e='exit'
+alias top='top -o cpu'
 
 alias ..="cd ../"
 alias ...="cd ../../"
