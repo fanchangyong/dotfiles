@@ -159,9 +159,9 @@ set noswapfile
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -438,11 +438,14 @@ Bundle "kana/vim-textobj-entire"
 Bundle "kana/vim-textobj-user"
 Bundle "ack.vim"
 Bundle "Solarized"
+Bundle "a.vim"
+Bundle "jeffkreeftmeijer/vim-numbertoggle"
+Bundle "scrooloose/nerdcommenter"
+Bundle "bufmru.vim"
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
-"set nu
 inoremap <c-h> <Left>
 inoremap <c-j> <Down>
 inoremap <c-k> <Up>
@@ -472,6 +475,7 @@ noremap \ ,
 
 " Enable Relative Line Number to conveniently use [count] with commands
 set rnu
+set nu
 
 " Automatically Generate ctags file When We Save Our File
 " But because its cost of performance (It may generate tag file EVERY TIME when we save our file),We disable it now
@@ -502,7 +506,7 @@ augroup END
 " Use <leader>q to quit,and disables :q
 nnoremap <leader>q :q<cr>
 "nnoremap <leader>qa :qa<cr>
-cabbrev q <nop>
+"cabbrev q <nop>
 cabbrev w <nop>
 nnoremap <leader>l :ls<cr>
 
@@ -516,6 +520,8 @@ nnoremap <leader>7 7<c-^>
 nnoremap <leader>8 8<c-^>
 nnoremap <leader>9 9<c-^>
 
+
 "nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
 "nnoremap <c-t> <c-o>
 
+let g:InsertModeAlternateHeader=0
