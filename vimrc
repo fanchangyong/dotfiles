@@ -442,6 +442,8 @@ Bundle "a.vim"
 Bundle "jeffkreeftmeijer/vim-numbertoggle"
 Bundle "scrooloose/nerdcommenter"
 Bundle "bufmru.vim"
+Bundle "justinmk/vim-sneak"
+Bundle 'junegunn/seoul256.vim'
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel

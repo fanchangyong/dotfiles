@@ -23,6 +23,7 @@ alias ls="ls ${ls_color}"
 alias grep="grep --color=auto -n"
 alias erlm="erl -man"
 alias mk=make
+alias m=make
 alias vi=vim
 alias l=ls
 alias ll="ls -l ${ls_color}"
