@@ -13,9 +13,11 @@ os=`uname -s`
 if [[ $os = "Darwin" ]]
 then
 	ls_color="-G"
+	top_arg="-o"
 elif [[ $os = "Linux" ]]
 then
 	ls_color="--color"
+	top_arg=""
 fi
 
 
@@ -40,8 +42,7 @@ alias c='clear'
 alias quit='exit'
 alias q='exit'
 alias e='exit'
-alias top='top -o cpu'
-
+alias top="top ${top_arg}"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
