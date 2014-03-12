@@ -21,6 +21,7 @@ fi
 
 alias ls="ls ${ls_color}"
 alias grep="grep --color=auto -n"
+alias egrep="egrep --color=auto -n"
 alias erlm="erl -man"
 alias mk=make
 alias m=make
@@ -41,6 +42,7 @@ alias quit='exit'
 alias q='exit'
 alias e='exit'
 alias top='top -o cpu'
+alias 'ccs'='clang -S -mllvm --x86-asm-syntax=intel '
 
 alias ..="cd ../"
 alias ...="cd ../../"
@@ -58,7 +60,7 @@ PS1=$PS1_COLOR	#setting color
 PS1+="[\w ]#"     #setting string
 PS1+=$PS1_COLOR_END #end setting color
 
-PATH="/usr/local/bin:$PATH"
+PATH="/usr/local/mysql/bin:/usr/local/bin:$PATH"
 
 export PS1
 export PATH
