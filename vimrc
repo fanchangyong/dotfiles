@@ -269,7 +269,7 @@ set stl+=%{HasPaste()}
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character
-noremap 0 ^
+"noremap 0 ^
 
 " Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
 nnoremap <M-j> mz:m+<cr>`z
