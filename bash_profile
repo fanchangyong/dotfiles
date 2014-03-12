@@ -52,6 +52,27 @@ alias cd..="cd ../"
 
 alias dot="cd $DOTFILE_DIR"
 
+################################################
+################## for dev #####################
+################################################
+
+alias ubuntu="ssh ubuntu@42.62.77.86"
+alias deployer="ssh deployer@42.62.77.86"
+alias onekey="cd /Users/kevin/repos/proj_golang/src/zerogame.info/thserver/&& ./one_key_dev.sh&& cd -"
+alias down="cd ~/Downloads/"
+alias cdg="cd ~/repos/proj_golang"
+alias cdgbin="cd ~/repos/proj_golang/bin/"
+alias bin="cd ~/repos/proj_golang/bin/"
+alias cdgsrc="cd ~/repos/proj_golang/src/zerogame.info/thserver/"
+alias src="cd ~/repos/proj_golang/src/zerogame.info/thserver/"
+alias cdgpkg="cd ~/repos/proj_golang/pkg/darwin_amd64/"
+alias pkg="cd ~/repos/proj_golang/pkg/darwin_amd64/zerogame.info/thserver/"
+alias de="cd ~/dev/thserver"
+alias dev="cd ~/dev/thserver;vim"
+
+################################################
+################## end dev #####################
+################################################
 
 PS1_COLOR="\e[0;35m"
 PS1_COLOR_END="\e[m"
@@ -64,3 +85,7 @@ PATH="/usr/local/bin:$PATH"
 export PS1
 export PATH
 export DOTFILE_DIR
+
+export GOROOT=/usr/local/go
+export GOPATH=/Users/kevin/repos/proj_golang
+export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
