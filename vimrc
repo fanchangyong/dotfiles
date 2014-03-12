@@ -223,7 +223,7 @@ noremap <leader>tm :tabmove
 noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
+"noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
@@ -330,10 +330,10 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-noremap <leader>cc :botright cope<cr>
-noremap <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-noremap <leader>n :cn<cr>
-noremap <leader>p :cp<cr>
+"noremap <leader>cc :botright cope<cr>
+"noremap <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+"noremap <leader>n :cn<cr>
+"noremap <leader>p :cp<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -444,6 +444,10 @@ Bundle "scrooloose/nerdcommenter"
 Bundle "bufmru.vim"
 Bundle "justinmk/vim-sneak"
 Bundle 'junegunn/seoul256.vim'
+Bundle 'uarun/vim-protobuf'
+"Bundle 'roman/golden-ratio'
+Bundle 'tpope/vim-fugitive'
+Bundle 'christoomey/vim-tmux-navigator'
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
@@ -477,7 +481,7 @@ noremap \ ,
 
 " Enable Relative Line Number to conveniently use [count] with commands
 set rnu
-set nu
+"set nu
 
 " Automatically Generate ctags file When We Save Our File
 " But because its cost of performance (It may generate tag file EVERY TIME when we save our file),We disable it now
@@ -522,8 +526,20 @@ nnoremap <leader>7 7<c-^>
 nnoremap <leader>8 8<c-^>
 nnoremap <leader>9 9<c-^>
 
+nnoremap <leader>c :cclose<cr>
+
 
 "nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
 "nnoremap <c-t> <c-o>
 
 let g:InsertModeAlternateHeader=0
+
+" for golang
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+set path+=$GOPATH/src/zerogame.info/thserver
+
+nnoremap <leader>a :Ack <cword><cr>
