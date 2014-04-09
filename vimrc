@@ -424,7 +424,7 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 " For Vundle
-set rtp+=~/.vim/vundle.git/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 "Bundle "fanchangyong/YouCompleteMe"
 Bundle "scrooloose/nerdtree"
@@ -442,7 +442,7 @@ Bundle "a.vim"
 Bundle "jeffkreeftmeijer/vim-numbertoggle"
 Bundle "scrooloose/nerdcommenter"
 Bundle "bufmru.vim"
-Bundle "justinmk/vim-sneak"
+"Bundle "justinmk/vim-sneak"
 Bundle 'junegunn/seoul256.vim'
 Bundle 'uarun/vim-protobuf'
 "Bundle 'roman/golden-ratio'
