@@ -442,12 +442,13 @@ Bundle "a.vim"
 Bundle "jeffkreeftmeijer/vim-numbertoggle"
 Bundle "scrooloose/nerdcommenter"
 Bundle "bufmru.vim"
-Bundle "justinmk/vim-sneak"
+"Bundle "justinmk/vim-sneak"
 Bundle 'junegunn/seoul256.vim'
 Bundle 'uarun/vim-protobuf'
 "Bundle 'roman/golden-ratio'
 Bundle 'tpope/vim-fugitive'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'moll/vim-node'
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel

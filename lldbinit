@@ -2,12 +2,15 @@
 
 ###command aliases
 #aliases for breakpoint operations
-command alias b breakpoint set
 command alias bn breakpoint set -n %1
 command alias bl breakpoint set -l %1
+command alias bfl breakpoint set --file %1 --line %2
 command alias bpl breakpoint list
 command alias be breakpoint enable 
 command alias bd breakpoint disable
 
 #aliases for frame
 command alias v frame variable
+
+###settings
+settings set target.x86-disassembly-flavor intel

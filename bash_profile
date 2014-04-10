@@ -44,8 +44,9 @@ alias quit='exit'
 alias q='exit'
 alias e='exit'
 alias 'ccs'='clang -S -mllvm --x86-asm-syntax=intel '
+alias tcpdump='sudo tcpdump'
 
-alias top="top ${top_arg}"
+#alias top="top ${top_arg}"
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
@@ -83,7 +84,7 @@ PS1=$PS1_COLOR	#setting color
 PS1+="[\w ]#"     #setting string
 PS1+=$PS1_COLOR_END #end setting color
 
-PATH="/usr/local/mysql/bin:/usr/local/bin:$PATH"
+PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:"
 
 export PS1
 export PATH
@@ -91,4 +92,6 @@ export DOTFILE_DIR
 
 export GOROOT=/usr/local/go
 export GOPATH=/Users/kevin/repos/proj_golang
-export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
+
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
+
