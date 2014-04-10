@@ -426,6 +426,8 @@ endfunction
 " For Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
+Plugin 'gmarik/vundle'
 "Bundle "fanchangyong/YouCompleteMe"
 Bundle "scrooloose/nerdtree"
 "Bundle "minibufexplorerpp"
@@ -438,7 +440,7 @@ Bundle "kana/vim-textobj-entire"
 Bundle "kana/vim-textobj-user"
 Bundle "ack.vim"
 Bundle "Solarized"
-Bundle "a.vim"
+Bundle "fanchangyong/a.vim"
 Bundle "jeffkreeftmeijer/vim-numbertoggle"
 Bundle "scrooloose/nerdcommenter"
 Bundle "bufmru.vim"
@@ -448,6 +450,7 @@ Bundle 'uarun/vim-protobuf'
 "Bundle 'roman/golden-ratio'
 Bundle 'tpope/vim-fugitive'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'ton/vim-bufsurf'
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
@@ -543,3 +546,5 @@ syntax on
 set path+=$GOPATH/src/zerogame.info/thserver
 
 nnoremap <leader>a :Ack <cword><cr>
+nnoremap gn :BufSurfForward<cr>
+nnoremap gp :BufSurfBack<cr>
