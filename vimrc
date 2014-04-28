@@ -427,7 +427,7 @@ endfunction
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-"Plugin 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 "Bundle "fanchangyong/YouCompleteMe"
 Bundle "scrooloose/nerdtree"
 "Bundle "minibufexplorerpp"
