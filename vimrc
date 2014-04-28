@@ -449,7 +449,7 @@ Bundle 'junegunn/seoul256.vim'
 Bundle 'uarun/vim-protobuf'
 "Bundle 'roman/golden-ratio'
 Bundle 'tpope/vim-fugitive'
-Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'moll/vim-node'
 Bundle 'ton/vim-bufsurf'
 

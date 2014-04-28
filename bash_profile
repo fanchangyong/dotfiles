@@ -90,8 +90,8 @@ export PS1
 export PATH
 export DOTFILE_DIR
 
-export GOROOT=/usr/local/go
-export GOPATH=/Users/kevin/repos/proj_golang
+#export GOROOT=/usr/local/go
+#export GOPATH=~/go/
 
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
