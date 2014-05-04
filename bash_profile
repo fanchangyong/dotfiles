@@ -95,3 +95,6 @@ export DOTFILE_DIR
 
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
+# mini wiki
+# inspied by http://www.commandlinefu.com/commands/view/5187/query-wikipedia-via-console-over-dns
+mwiki() { dig +short txt "$*".wp.dg.cx; }
