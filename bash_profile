@@ -84,7 +84,7 @@ PS1=$PS1_COLOR	#setting color
 PS1+="[\w ]#"     #setting string
 PS1+=$PS1_COLOR_END #end setting color
 
-PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:"
+PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin"
 
 export PS1
 export PATH
