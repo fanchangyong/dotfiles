@@ -424,10 +424,12 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 " For Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 "Bundle "fanchangyong/YouCompleteMe"
 Bundle "scrooloose/nerdtree"
 "Bundle "minibufexplorerpp"
@@ -452,6 +454,9 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'moll/vim-node'
 Bundle 'ton/vim-bufsurf'
+
+call vundle#end()
+filetype plugin indent on
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
