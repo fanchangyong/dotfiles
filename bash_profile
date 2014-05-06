@@ -81,7 +81,7 @@ alias dev="cd ~/dev/thserver;vim"
 PS1_COLOR="\e[0;35m"
 PS1_COLOR_END="\e[m"
 PS1=$PS1_COLOR	#setting color
-PS1+="[\w ]#"     #setting string
+PS1+="[\u@\H \w ]#"     #setting string
 PS1+=$PS1_COLOR_END #end setting color
 
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin"
