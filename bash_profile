@@ -95,3 +95,8 @@ export DOTFILE_DIR
 
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
+if [ -e "~/.git-completion.bash" ]; then
+	echo "sourcing git completion"
+	source "~/.git-completion.bash"
+fi
+
