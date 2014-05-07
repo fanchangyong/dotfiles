@@ -81,10 +81,10 @@ alias dev="cd ~/dev/thserver;vim"
 PS1_COLOR="\e[0;35m"
 PS1_COLOR_END="\e[m"
 PS1=$PS1_COLOR	#setting color
-PS1+="[\w ]#"     #setting string
+PS1+="[\u@\H \w ]#"     #setting string
 PS1+=$PS1_COLOR_END #end setting color
 
-PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:"
+PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin"
 
 export PS1
 export PATH
@@ -100,3 +100,9 @@ if [ -e "~/.git-completion.bash" ]; then
 	source "~/.git-completion.bash"
 fi
 
+# mini wiki
+# inspied by http://www.commandlinefu.com/commands/view/5187/query-wikipedia-via-console-over-dns
+mwiki() { dig +short txt "$*".wp.dg.cx; }
+
+# qingyun cloud
+alias qingyun="ssh root@121.201.8.32"

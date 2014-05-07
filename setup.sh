@@ -6,9 +6,13 @@ ln -f -s "$PWD/tmux.conf" ~/.tmux.conf
 ln -f -s "$PWD/lldbinit" ~/.lldbinit
 ln -f -s "$PWD/psqlrc" ~/.psqlrc
 
+# setup vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 os=`uname -s`
 if [[ $os = 'Linux' ]]
 then
-	ln -s "$PWD/bashrc" ~/.bashrc
+	#ln -s "$PWD/bashrc" ~/.bashrc
+	echo ""
 fi
 
