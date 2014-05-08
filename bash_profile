@@ -32,6 +32,7 @@ alias l=ls
 alias ll="ls -l ${ls_color}"
 alias .="source ~/.bash_profile"
 alias .g="source $DOTFILE_DIR/gitconf.sh"
+alias so=source
 alias tma="tmux attach"
 alias tm=tmux
 alias eb="vim ~/.bash_profile" # Edit bash profile
