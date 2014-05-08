@@ -111,4 +111,6 @@ fi
 mwiki() { dig +short txt "$*".wp.dg.cx; }
 
 # qingyun cloud
-alias qingyun="ssh ubuntu@121.201.8.37"
+qingyun_ip="121.201.8.37"
+alias qingyun_root="ssh root@$qingyun_ip"
+alias qingyun="ssh ubuntu@$qingyun_ip"
