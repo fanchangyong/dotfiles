@@ -111,4 +111,4 @@ fi
 mwiki() { dig +short txt "$*".wp.dg.cx; }
 
 # qingyun cloud
-alias qingyun="ssh ubuntu@121.201.8.32"
+alias qingyun="ssh ubuntu@121.201.8.37"
