@@ -554,3 +554,6 @@ set path+=$GOPATH/src/zerogame.info/thserver
 nnoremap <leader>a :Ack <cword><cr>
 nnoremap gn :BufSurfForward<cr>
 nnoremap gp :BufSurfBack<cr>
+
+set modeline
+set modelines=5
