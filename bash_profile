@@ -114,3 +114,5 @@ mwiki() { dig +short txt "$*".wp.dg.cx; }
 qingyun_ip="121.201.8.37"
 alias qingyun_root="ssh root@$qingyun_ip"
 alias qingyun="ssh ubuntu@$qingyun_ip"
+
+alias staging="ssh ubuntu@e.blingstorm.com.cn -p 5022"
