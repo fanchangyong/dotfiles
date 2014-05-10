@@ -82,11 +82,26 @@ alias dev="cd ~/dev/thserver;vim"
 
 source ~/.colors.sh
 
+if [[ $os = "Linux" ]]
+then
+	if command -v lsb_release > /dev/null 2>&1
+	then
+		redist=`lsb_release -i|awk '{print $3}'`
+	else
+		redist=`cat /etc/issue|awk '{print $1]'`
+	fi
+fi
+
+if [[ -z $redist ]]
+then
+	redist=$os
+fi
+
 if [[ $(id -u) == "0" ]]
 then
 	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple$"
 else
-	PS1="$Green\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple#"
+	PS1="$Green\u$IGreen@$Cyan\H $Purple($redist) $Yellow\w $Purple#"
 fi
 PS1+=$Color_Off #end setting color
 
