@@ -46,6 +46,7 @@ alias q='exit'
 alias e='exit'
 alias 'ccs'='clang -S -mllvm --x86-asm-syntax=intel '
 alias tcpdump='sudo tcpdump'
+alias tree='tree -C'
 
 #alias top="top ${top_arg}"
 alias ..="cd ../"
