@@ -82,6 +82,8 @@ alias dev="cd ~/dev/thserver;vim"
 
 source ~/.colors.sh
 
+`set -o|grep vi`
+
 if [[ $(id -u) == "0" ]]
 then
 	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple$"
@@ -97,6 +99,7 @@ export PATH
 export DOTFILE_DIR
 # 在history中忽略重复的命令
 export HISTCONTROL=ignoredups
+export EDITOR=vim
 
 #export GOROOT=/usr/local/go
 #export GOPATH=~/go/
@@ -109,7 +112,7 @@ if [ -e "~/.git-completion.bash" ]; then
 fi
 
 # mini wiki
-# inspied by http://www.commandlinefu.com/commands/view/5187/query-wikipedia-via-console-over-dns
+# inspied by http://www.commandlinefu.com/commands/view/5188/query-wikipedia-via-console-over-dns
 mwiki() { dig +short txt "$*".wp.dg.cx; }
 
 # qingyun cloud
@@ -125,4 +128,7 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
+# enable vi mode of bash readline
+set -o vi
 
