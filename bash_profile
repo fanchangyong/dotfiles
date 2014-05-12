@@ -32,6 +32,7 @@ alias l=ls
 alias ll="ls -l ${ls_color}"
 alias .="source ~/.bash_profile"
 alias .g="source $DOTFILE_DIR/gitconf.sh"
+alias so=source
 alias tma="tmux attach"
 alias tm=tmux
 alias eb="vim ~/.bash_profile" # Edit bash profile
@@ -45,6 +46,7 @@ alias q='exit'
 alias e='exit'
 alias 'ccs'='clang -S -mllvm --x86-asm-syntax=intel '
 alias tcpdump='sudo tcpdump'
+alias tree='tree -C'
 
 #alias top="top ${top_arg}"
 alias ..="cd ../"
@@ -78,23 +80,23 @@ alias dev="cd ~/dev/thserver;vim"
 ################## end dev #####################
 ################################################
 
-PS1_COLOR="\e[0;35m"
-PS1_COLOR_END="\e[m"
-PS1=$PS1_COLOR	#setting color
-if [[ $os = "Darwin" ]]
+source ~/.colors.sh
+
+if [[ $(id -u) == "0" ]]
 then
-	PS1+="[\t \w]#"
-elif [[ $os = "Linux" ]]
-then
-	PS1+="[\u@\H ($os) \w ]#"
+	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple$"
+else
+	PS1="$Green\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple#"
 fi
-PS1+=$PS1_COLOR_END #end setting color
+PS1+=$Color_Off #end setting color
 
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin"
 
 export PS1
 export PATH
 export DOTFILE_DIR
+# 在history中忽略重复的命令
+export HISTCONTROL=ignoredups
 
 #export GOROOT=/usr/local/go
 #export GOPATH=~/go/
@@ -114,5 +116,13 @@ mwiki() { dig +short txt "$*".wp.dg.cx; }
 qingyun_ip="121.201.8.37"
 alias qingyun_root="ssh root@$qingyun_ip"
 alias qingyun="ssh ubuntu@$qingyun_ip"
-
 alias staging="ssh ubuntu@e.blingstorm.com.cn -p 5022"
+
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
