@@ -82,8 +82,6 @@ alias dev="cd ~/dev/thserver;vim"
 
 source ~/.colors.sh
 
-`set -o|grep vi`
-
 if [[ $(id -u) == "0" ]]
 then
 	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple$"
@@ -131,4 +129,5 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # enable vi mode of bash readline
 set -o vi
+set -o ignoreeof
 
