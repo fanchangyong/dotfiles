@@ -557,3 +557,6 @@ nnoremap gp :BufSurfBack<cr>
 
 set modeline
 set modelines=5
+
+nnoremap ; :
+nnoremap : ;
