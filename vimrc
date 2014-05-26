@@ -522,7 +522,7 @@ augroup END
 nnoremap <leader>q :q<cr>
 "nnoremap <leader>qa :qa<cr>
 "cabbrev q <nop>
-cabbrev w <nop>
+"cabbrev w <nop>
 nnoremap <leader>l :ls<cr>
 
 nnoremap <leader>1 1<c-^>
