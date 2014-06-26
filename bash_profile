@@ -105,7 +105,8 @@ else
 fi
 PS1+=$Color_Off #end setting color
 
-PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin"
+export GOPATH=~/test/go
+PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
 
 export PS1
 export PATH
@@ -115,7 +116,6 @@ export HISTCONTROL=ignoredups
 export EDITOR=vim
 
 #export GOROOT=/usr/local/go
-#export GOPATH=~/go/
 
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
