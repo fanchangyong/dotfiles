@@ -549,7 +549,8 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
-set path+=$GOPATH/src/zerogame.info/thserver
+
+set path=.,/usr/include,,,$PWD/**
 
 nnoremap <leader>a :Ack <cword><cr>
 nnoremap gn :BufSurfForward<cr>
@@ -560,3 +561,22 @@ set modelines=5
 
 nnoremap ; :
 nnoremap : ;
+
+
+" If the file is readonly,preventing us from editing this file
+function UpdateModifiable()
+	if !exists("b:setmodifiable")
+		let b:setmodifiable = 0
+	endif
+	if &readonly
+		if &modifiable
+			setlocal nomodifiable
+			let b:setmodifiable = 1
+		endif
+	else
+		if b:setmodifiable
+			setlocal modifiable
+		endif
+	endif
+endfunction
+autocmd BufReadPost * call UpdateModifiable()
