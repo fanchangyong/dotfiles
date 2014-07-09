@@ -146,3 +146,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 set -o vi
 set -o ignoreeof
 
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
