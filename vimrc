@@ -454,6 +454,8 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'moll/vim-node'
 Bundle 'ton/vim-bufsurf'
+" Vim plugin for Io language
+Bundle 'andreimaxim/vim-io'
 
 call vundle#end()
 filetype plugin indent on
@@ -476,7 +478,7 @@ let NERDTreeShowLineNumbers=1
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
 
-noremap <Up> <Nop>
+"noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
@@ -562,21 +564,5 @@ set modelines=5
 nnoremap ; :
 nnoremap : ;
 
+set pastetoggle=<Up>
 
-" If the file is readonly,preventing us from editing this file
-function UpdateModifiable()
-	if !exists("b:setmodifiable")
-		let b:setmodifiable = 0
-	endif
-	if &readonly
-		if &modifiable
-			setlocal nomodifiable
-			let b:setmodifiable = 1
-		endif
-	else
-		if b:setmodifiable
-			setlocal modifiable
-		endif
-	endif
-endfunction
-autocmd BufReadPost * call UpdateModifiable()
