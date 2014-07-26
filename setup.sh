@@ -6,6 +6,7 @@ ln -f -s "$PWD/tmux.conf" ~/.tmux.conf
 ln -f -s "$PWD/lldbinit" ~/.lldbinit
 ln -f -s "$PWD/psqlrc" ~/.psqlrc
 ln -f -s "$PWD/inputrc" ~/.inputrc
+ln -f -s "$PWD/slate" ~/.slate
 
 # setup vundle
 if test -d "~/.vim/bundle/Vundle.vim"; then

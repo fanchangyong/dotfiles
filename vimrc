@@ -435,7 +435,7 @@ Bundle "scrooloose/nerdtree"
 "Bundle "minibufexplorerpp"
 Bundle "cocoa.vim"
 Bundle "jimenezrick/vimerl.git"
-Bundle "scrooloose/syntastic"
+"Bundle "scrooloose/syntastic"
 "Bundle "Rip-Rip/clang_complete"
 Bundle "tpope/vim-commentary"
 Bundle "kana/vim-textobj-entire"
@@ -456,6 +456,8 @@ Bundle 'moll/vim-node'
 Bundle 'ton/vim-bufsurf'
 " Vim plugin for Io language
 Bundle 'andreimaxim/vim-io'
+" Vim plugin for coffee script
+Bundle 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on
@@ -478,10 +480,10 @@ let NERDTreeShowLineNumbers=1
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
 
-"noremap <Up> <Nop>
+noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
-noremap <Right> <Nop>
+"noremap <Right> <Nop>
 
 noremap k gk
 noremap gk k
@@ -564,5 +566,5 @@ set modelines=5
 nnoremap ; :
 nnoremap : ;
 
-set pastetoggle=<Up>
+set pastetoggle=<Right>
 

@@ -47,6 +47,9 @@ alias e='exit'
 alias 'ccs'='clang -S -mllvm --x86-asm-syntax=intel '
 alias tcpdump='sudo tcpdump'
 alias tree='tree -C'
+alias cf=coffee
+alias dtrace='sudo dtrace'
+alias dtruss='sudo dtruss'
 
 #alias top="top ${top_arg}"
 alias ..="cd ../"
@@ -107,9 +110,9 @@ PS1+=$Color_Off #end setting color
 
 export GOPATH=~/test/go
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
+PATH+=":$HOME/.rvm/bin"
 
 export PS1
-export PATH
 export DOTFILE_DIR
 # 在history中忽略重复的命令
 export HISTCONTROL=ignoredups
@@ -146,6 +149,3 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 set -o vi
 set -o ignoreeof
 
-# NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
