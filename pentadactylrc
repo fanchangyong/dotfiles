@@ -4,4 +4,6 @@ set go+=n
 set hintkeys=asdfghjkl;zxcvbnm
 nmap -builtin d D
 nmap -builtin D d
+nmap -builtin <C-h> <C-p>
+nmap -builtin <C-l> <C-n>
 colorscheme solarized-dark
