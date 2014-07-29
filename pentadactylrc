@@ -9,6 +9,7 @@ nmap -builtin <C-h> <C-p>
 nmap -builtin <C-l> <C-n>
 nmap -builtin ; :
 nmap -builtin : ;
+nmap <BS> <Nop> 
 
 
 colorscheme solarized-dark
