@@ -9,7 +9,13 @@ nmap -builtin <C-h> <C-p>
 nmap -builtin <C-l> <C-n>
 nmap -builtin ; :
 nmap -builtin : ;
-nmap <BS> <Nop> 
+nmap -builtin <BS> <Nop> 
 
+" Zoom In(Enlarge)
+nmap -builtin zh ZM
+nmap -builtin zj ZI
+" Zoom out(Shrink)
+nmap -builtin zl ZR
+nmap -builtin zk ZO
 
 colorscheme solarized-dark
