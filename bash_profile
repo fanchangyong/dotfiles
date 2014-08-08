@@ -109,7 +109,7 @@ fi
 PS1+=$Color_Off #end setting color
 
 export GOPATH=~/test/go
-PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin/:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
+PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
 PATH+=":$HOME/.rvm/bin"
 
 export PS1
@@ -149,5 +149,11 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 set -o vi
 set -o ignoreeof
 
-source $(brew --prefix nvm)/nvm.sh
-export NVM_DIR=~/.nvm
+if ~ test -z $(brew --prefix nvm); then
+	source $(brew --prefix nvm)/nvm.sh
+	export NVM_DIR=~/.nvm
+fi
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/Users/kevin/Downloads/cocos2d-js-v3.0-rc1/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
