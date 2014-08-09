@@ -1,0 +1,14 @@
+iterm2
+alfred
+firefox
+virtualbox
+qq
+vagrant
+dropbox
+youdao
+wireshark
+google-chrome
+macvim
+evernote
+shuttle
+thunder
