@@ -102,9 +102,9 @@ fi
 
 if [[ $(id -u) == "0" ]]
 then
-	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple$"
+	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple#"
 else
-	PS1="$Green\u$IGreen@$Cyan\H $Purple($redist) $Yellow\w $Purple#"
+	PS1="$Green\u$IGreen@$Cyan\H $Purple($redist) $Yellow\w $Purple:"
 fi
 PS1+=$Color_Off #end setting color
 
@@ -148,6 +148,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # enable vi mode of bash readline
 set -o vi
 set -o ignoreeof
+
 
 if ! test -z $(brew --prefix nvm); then
 	source $(brew --prefix nvm)/nvm.sh
