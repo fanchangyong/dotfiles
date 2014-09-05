@@ -157,3 +157,6 @@ fi
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/kevin/Downloads/cocos2d-js-v3.0-rc1/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# locales
+export LC_ALL=en_US.UTF-8
