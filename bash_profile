@@ -1,5 +1,7 @@
 # vim: set ft=sh:
 
+source "./utils.sh"
+
 SCRIPT=${BASH_SOURCE[0]}
 if [[ -h $SCRIPT ]]
 then
@@ -20,6 +22,9 @@ then
 	top_arg=""
 fi
 
+if `has sshrc`; then
+	alias ssh=sshrc
+fi
 
 alias ls="ls ${ls_color}"
 alias grep="grep --color=auto -n"
@@ -149,9 +154,13 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 set -o vi
 set -o ignoreeof
 
+#load nvm
 export NVM_DIR=~/.nvm
-if ! test -z $NVM_DIR; then
+
+if [ -e $NVM_DIR/nvm.sh ]; then
 	source $NVM_DIR/nvm.sh
+elif [ -e $(brew --prefix nvm)/nvm.sh ]; then # Assume we always have brew installed
+	source $(brew --prefix nvm)/nvm.sh
 fi
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x

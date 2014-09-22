@@ -9,6 +9,9 @@ ln -f -s "$PWD/inputrc" ~/.inputrc
 ln -f -s "$PWD/slate" ~/.slate
 ln -f -s "$PWD/pentadactylrc" ~/.pentadactylrc
 
+# for sshrc
+
+
 # setup vundle
 if test -d "~/.vim/bundle/Vundle.vim"; then
 	echo "Installing Vundle!"
