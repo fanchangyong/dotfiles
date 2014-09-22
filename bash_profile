@@ -1,6 +1,5 @@
 # vim: set ft=sh:
 
-source "./utils.sh"
 
 SCRIPT=${BASH_SOURCE[0]}
 if [[ -h $SCRIPT ]]
@@ -9,6 +8,9 @@ then
 else
 	DOTFILE_DIR=$(dirname ${BASH_SOURCE[0]})
 fi
+
+source "$DOTFILE_DIR/utils.sh"
+source "$DOTFILE_DIR/colors.sh"
 
 os=`uname -s`
 
@@ -88,7 +90,6 @@ alias dev="cd ~/dev/thserver;vim"
 ################## end dev #####################
 ################################################
 
-source ~/.colors.sh
 
 if [[ $os = "Linux" ]]
 then
