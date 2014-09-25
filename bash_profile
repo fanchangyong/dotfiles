@@ -174,4 +174,4 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # open files limit
-# ulimit -n 10000000
+ulimit -n 10000000 2> /dev/null
