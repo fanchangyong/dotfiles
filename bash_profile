@@ -28,6 +28,10 @@ if `has sshrc`; then
 	alias ssh=sshrc
 fi
 
+if `has hub`; then
+	alias git=hub
+fi
+
 alias ls="ls ${ls_color}"
 alias grep="grep --color=auto -n"
 alias egrep="egrep --color=auto -n"
