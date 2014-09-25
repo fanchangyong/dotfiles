@@ -160,7 +160,7 @@ export NVM_DIR=~/.nvm
 
 if [ -e $NVM_DIR/nvm.sh ]; then
 	source $NVM_DIR/nvm.sh
-elif [ -e $(brew --prefix nvm)/nvm.sh ]; then # Assume we always have brew installed
+elif `has brew` && [ -e $(brew --prefix nvm)/nvm.sh ]; then 
 	source $(brew --prefix nvm)/nvm.sh
 fi
 
@@ -170,3 +170,6 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # locales
 export LC_ALL=en_US.UTF-8
+
+# open files limit
+ulimit -n 10000000
