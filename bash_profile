@@ -162,11 +162,14 @@ set -o ignoreeof
 #load nvm
 export NVM_DIR=~/.nvm
 
-if [ -e $NVM_DIR/nvm.sh ]; then
-	source $NVM_DIR/nvm.sh
-elif `has brew` && [ -e $(brew --prefix nvm)/nvm.sh ]; then 
-	source $(brew --prefix nvm)/nvm.sh
-fi
+function loadnvm()
+{
+	if [ -e $NVM_DIR/nvm.sh ]; then
+		source $NVM_DIR/nvm.sh
+	elif `has brew` && [ -e $(brew --prefix nvm)/nvm.sh ]; then 
+		source $(brew --prefix nvm)/nvm.sh
+	fi
+}
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/kevin/Downloads/cocos2d-js-v3.0-rc1/tools/cocos2d-console/bin
@@ -178,4 +181,4 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # open files limit
-ulimit -n 10000000 2> /dev/null
+ulimit -n 100000 2> /dev/null
