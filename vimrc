@@ -569,3 +569,4 @@ nnoremap : ;
 
 set pastetoggle=<Right>
 
+set tags=./tags;/
