@@ -459,6 +459,8 @@ Bundle 'andreimaxim/vim-io'
 " Vim plugin for coffee script
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'ntpeters/vim-better-whitespace'
+" Vim plugin for scala
+Bundle 'derekwyatt/vim-scala'
 
 call vundle#end()
 filetype plugin indent on
