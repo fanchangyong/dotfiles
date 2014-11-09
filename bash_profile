@@ -20,6 +20,7 @@ then
 	top_arg="-o"
 elif [[ $os = "Linux" ]]
 then
+	alias ack="ack-grep"
 	ls_color="--color"
 	top_arg=""
 fi
