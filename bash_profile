@@ -149,6 +149,9 @@ alias qingyun_root="ssh root@$qingyun_ip"
 alias qingyun="ssh ubuntu@$qingyun_ip"
 alias staging="ssh ubuntu@e.blingstorm.com.cn -p 5022"
 
+linode_ip="198.74.51.88"
+alias linode="ssh root@$linode_ip"
+
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
