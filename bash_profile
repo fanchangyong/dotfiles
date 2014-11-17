@@ -183,4 +183,4 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # open files limit
-ulimit -n 100000 2> /dev/null
+ulimit -n 1000000 2> /dev/null
