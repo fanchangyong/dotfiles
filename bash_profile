@@ -113,6 +113,8 @@ then
 	redist=$os
 fi
 
+export PROMPT_DIRTRIM=3
+
 if [[ $(id -u) == "0" ]]
 then
 	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple#"
@@ -187,4 +189,4 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # open files limit
-ulimit -n 1000000 2> /dev/null
+ulimit -n 100000 2> /dev/null
