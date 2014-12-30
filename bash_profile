@@ -64,6 +64,7 @@ alias tree='tree -C'
 alias cf=coffee
 alias dtrace='sudo dtrace'
 alias dtruss='sudo dtruss'
+alias docker='sudo docker'
 
 #alias top="top ${top_arg}"
 alias ..="cd ../"
@@ -113,6 +114,8 @@ then
 	redist=$os
 fi
 
+export PROMPT_DIRTRIM=3
+
 if [[ $(id -u) == "0" ]]
 then
 	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple#"
@@ -124,6 +127,8 @@ PS1+=$Color_Off #end setting color
 export GOPATH=~/test/go
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
 PATH+=":$HOME/.rvm/bin"
+PATH="/usr/local/openresty/nginx/sbin:$PATH"
+PATH="~/.composer/vendor/bin/:$PATH"
 
 export PS1
 export DOTFILE_DIR
@@ -181,6 +186,8 @@ function loadnvm()
 	fi
 }
 
+
+
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/kevin/Downloads/cocos2d-js-v3.0-rc1/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
@@ -192,3 +199,16 @@ export LC_ALL=en_US.UTF-8
 
 # open files limit
 ulimit -n 100000 2> /dev/null
+
+#HADOOP VARIABLES START
+export JAVA_HOME=/usr/lib/jvm/default-java
+export HADOOP_PREFIX=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_PREFIX/bin
+export PATH=$PATH:$HADOOP_PREFIX/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_PREFIX
+export HADOOP_COMMON_HOME=$HADOOP_PREFIX
+export HADOOP_HDFS_HOME=$HADOOP_PREFIX
+export YARN_HOME=$HADOOP_PREFIX
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_PREFIX/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
+#HADOOP VARIABLES END
