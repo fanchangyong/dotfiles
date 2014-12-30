@@ -1,5 +1,6 @@
 # vim: set ft=sh:
 
+export PROMPT_DIRTRIM=2
 
 SCRIPT=${BASH_SOURCE[0]}
 if [[ -h $SCRIPT ]]
@@ -25,9 +26,9 @@ then
 	top_arg=""
 fi
 
-if `has sshrc`; then
-	alias ssh=sshrc
-fi
+#if `has sshrc`; then
+	#alias ssh=sshrc
+#fi
 
 if `has hub`; then
 	alias git=hub
@@ -149,8 +150,12 @@ alias qingyun_root="ssh root@$qingyun_ip"
 alias qingyun="ssh ubuntu@$qingyun_ip"
 alias staging="ssh ubuntu@e.blingstorm.com.cn -p 5022"
 
-linode_ip="198.74.51.88"
+linode_ip="23.239.9.105"
 alias linode="ssh root@$linode_ip"
+
+aws_ip="54.68.202.147"
+alias aws="ssh ubuntu@$aws_ip"
+alias socks="ssh -ND 5555 ubuntu@$aws_ip"
 
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
