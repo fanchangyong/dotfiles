@@ -127,6 +127,7 @@ export GOPATH=~/test/go
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
 PATH+=":$HOME/.rvm/bin"
 PATH="/usr/local/openresty/nginx/sbin:$PATH"
+PATH="~/.composer/vendor/bin/:$PATH"
 
 export PS1
 export DOTFILE_DIR
