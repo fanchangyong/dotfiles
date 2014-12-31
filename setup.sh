@@ -7,6 +7,7 @@ ln -f -s "$PWD/psqlrc" ~/.psqlrc
 ln -f -s "$PWD/inputrc" ~/.inputrc
 ln -f -s "$PWD/slate" ~/.slate
 ln -f -s "$PWD/pentadactylrc" ~/.pentadactylrc
+ln -f -s "$PWD/iterms.plist" ~/Library/Preferences/com.googlecode.iterm2.plist
 
 # for sshrc
 
