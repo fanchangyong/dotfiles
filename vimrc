@@ -471,6 +471,11 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-easytags'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'ag.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -588,3 +593,10 @@ let g:tagbar_width=25
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
 noremap <leader>z :TagbarToggle<cr>
+
+" settings for vim-sessions
+let g:session_autosave='yes'
+let g:session_autoload='yes'
+
+" settings for vim-easytags
+let g:easytags_async=1
