@@ -430,43 +430,45 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-"Bundle "fanchangyong/YouCompleteMe"
-Bundle "scrooloose/nerdtree"
-"Bundle "minibufexplorerpp"
-Bundle "cocoa.vim"
-Bundle "jimenezrick/vimerl.git"
-"Bundle "scrooloose/syntastic"
-"Bundle "Rip-Rip/clang_complete"
-Bundle "tpope/vim-commentary"
-Bundle "kana/vim-textobj-entire"
-Bundle "kana/vim-textobj-user"
-Bundle "ack.vim"
-Bundle "Solarized"
-Bundle "fanchangyong/a.vim"
-Bundle "jeffkreeftmeijer/vim-numbertoggle"
-Bundle "scrooloose/nerdcommenter"
-Bundle "bufmru.vim"
-"Bundle "justinmk/vim-sneak"
-Bundle 'junegunn/seoul256.vim'
-Bundle 'uarun/vim-protobuf'
-"Bundle 'roman/golden-ratio'
-Bundle 'tpope/vim-fugitive'
-"Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'moll/vim-node'
-Bundle 'ton/vim-bufsurf'
+"Plugin 'fanchangyong/YouCompleteMe'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'minibufexplorerpp'
+Plugin 'cocoa.vim'
+Plugin 'jimenezrick/vimerl.git'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'Rip-Rip/clang_complete'
+Plugin 'tpope/vim-commentary'
+Plugin 'kana/vim-textobj-entire'
+Plugin 'kana/vim-textobj-user'
+Plugin 'ack.vim'
+Plugin 'Solarized'
+Plugin 'fanchangyong/a.vim'
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'bufmru.vim'
+"Plugin 'justinmk/vim-sneak'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'uarun/vim-protobuf'
+"Plugin 'roman/golden-ratio'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'moll/vim-node'
+Plugin 'ton/vim-bufsurf'
 " Vim plugin for Io language
-Bundle 'andreimaxim/vim-io'
+Plugin 'andreimaxim/vim-io'
 " Vim plugin for coffee script
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'ntpeters/vim-better-whitespace'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'ntpeters/vim-better-whitespace'
 " Vim plugin for scala
-Bundle 'derekwyatt/vim-scala'
-Bundle 'fatih/vim-go'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'andrep/vimacs'
-Bundle 'wting/rust.vim'
-Bundle 'cespare/vim-toml'
-
+Plugin 'derekwyatt/vim-scala'
+Plugin 'fatih/vim-go'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'andrep/vimacs'
+Plugin 'wting/rust.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'mhinz/vim-startify'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tomasr/molokai'
 
 call vundle#end()
 filetype plugin indent on
