@@ -216,7 +216,8 @@ noremap <leader>ba :1,1000 bd!<cr>
 noremap <leader>tn :tabnew<cr>
 noremap <leader>to :tabonly<cr>
 noremap <leader>tc :tabclose<cr>
-noremap <leader>tm :tabmove 
+noremap <leader>tm :tabmove<cr>
+noremap <leader>ta :TagbarToggle<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
@@ -468,7 +469,9 @@ Plugin 'wting/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'mhinz/vim-startify'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tomasr/molokai'
+Plugin 'godlygeek/tabular'
+Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -580,3 +583,8 @@ nnoremap : ;
 set pastetoggle=<Right>
 
 set tags=./tags;/
+
+" settings for tagbar
+let g:tagbar_width=25
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
