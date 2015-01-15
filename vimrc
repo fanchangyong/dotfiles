@@ -463,6 +463,9 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'fatih/vim-go'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'andrep/vimacs'
+Bundle 'wting/rust.vim'
+Bundle 'cespare/vim-toml'
 
 
 call vundle#end()

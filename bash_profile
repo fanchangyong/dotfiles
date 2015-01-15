@@ -129,6 +129,7 @@ PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/loc
 PATH+=":$HOME/.rvm/bin"
 PATH="/usr/local/openresty/nginx/sbin:$PATH"
 PATH="~/.composer/vendor/bin/:$PATH"
+PATH="$HOME/.pyenv/bin:$PATH"
 
 export PS1
 export DOTFILE_DIR
@@ -138,7 +139,8 @@ export EDITOR=vim
 
 #export GOROOT=/usr/local/go
 
-export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
+export DYLD_LIBRARY_PATH="/usr/local/lib:/usr/local/mysql/lib"
+export LD_LIBRARY_PATH="$DYLD_LIBRARY_PATH"
 
 if [ -e "~/.git-completion.bash" ]; then
 	echo "sourcing git completion"
@@ -212,3 +214,5 @@ export YARN_HOME=$HADOOP_PREFIX
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_PREFIX/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
 #HADOOP VARIABLES END
+
+# pyenv
