@@ -440,7 +440,6 @@ Plugin 'jimenezrick/vimerl.git'
 Plugin 'tpope/vim-commentary'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-user'
-Plugin 'ack.vim'
 Plugin 'Solarized'
 Plugin 'fanchangyong/a.vim'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
@@ -475,7 +474,8 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
 Plugin 'xolox/vim-easytags'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ag.vim'
+Plugin 'rking/ag.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()
 filetype plugin indent on
@@ -574,7 +574,7 @@ syntax on
 
 set path=.,/usr/include,,,$PWD/**
 
-nnoremap <leader>a :Ack <cword><cr>
+nnoremap <leader>a :Ag
 nnoremap gn :BufSurfForward<cr>
 nnoremap gp :BufSurfBack<cr>
 
@@ -600,3 +600,12 @@ let g:session_autoload='yes'
 
 " settings for vim-easytags
 let g:easytags_async=1
+
+" settings for ag.vim
+let g:ag_prg="ag"
+
+" settings for indent-guides
+let g:indent_guides_auto_colors = 1
+let g:indent_guides_color_change_percent = 50
+hi IndentGuidesOdd  ctermbg=black
+hi IndentGuidesEven ctermbg=darkgrey
