@@ -433,7 +433,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'altercation/vim-colors-solarized'
 Plug 'fanchangyong/a.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-"Plug 'bufmru.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'uarun/vim-protobuf'
 Plug 'roman/golden-ratio'
@@ -469,6 +468,7 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-surround'
 Plug 'kana/vim-smartinput'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 filetype plugin indent on
