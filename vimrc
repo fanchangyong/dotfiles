@@ -423,61 +423,55 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" For Vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" For plug.vim
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-"Plugin 'fanchangyong/YouCompleteMe'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'minibufexplorerpp'
-Plugin 'cocoa.vim'
-Plugin 'jimenezrick/vimerl.git'
-"Plugin 'scrooloose/syntastic'
-"Plugin 'Rip-Rip/clang_complete'
-Plugin 'tpope/vim-commentary'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-user'
-Plugin 'Solarized'
-Plugin 'fanchangyong/a.vim'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'bufmru.vim'
-"Plugin 'justinmk/vim-sneak'
-Plugin 'junegunn/seoul256.vim'
-Plugin 'uarun/vim-protobuf'
-"Plugin 'roman/golden-ratio'
-Plugin 'tpope/vim-fugitive'
-"Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'moll/vim-node'
-Plugin 'ton/vim-bufsurf'
+Plug 'gmarik/Vundle.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-commentary'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user'
+Plug 'Solarized'
+Plug 'fanchangyong/a.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'scrooloose/nerdcommenter'
+Plug 'bufmru.vim'
+"Plug 'justinmk/vim-sneak'
+Plug 'junegunn/seoul256.vim'
+Plug 'uarun/vim-protobuf'
+"Plug 'roman/golden-ratio'
+Plug 'tpope/vim-fugitive'
+"Plug 'christoomey/vim-tmux-navigator'
+Plug 'moll/vim-node'
+Plug 'ton/vim-bufsurf'
 " Vim plugin for Io language
-Plugin 'andreimaxim/vim-io'
+Plug 'andreimaxim/vim-io'
 " Vim plugin for coffee script
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'kchmck/vim-coffee-script'
+Plug 'ntpeters/vim-better-whitespace'
 " Vim plugin for scala
-Plugin 'derekwyatt/vim-scala'
-Plugin 'fatih/vim-go'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'andrep/vimacs'
-Plugin 'wting/rust.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'mhinz/vim-startify'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'godlygeek/tabular'
-Plugin 'kien/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'xolox/vim-easytags'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'rking/ag.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'derekwyatt/vim-scala'
+Plug 'fatih/vim-go'
+Plug 'digitaltoad/vim-jade'
+Plug 'andrep/vimacs'
+Plug 'wting/rust.vim'
+Plug 'cespare/vim-toml'
+Plug 'mhinz/vim-startify'
+Plug 'vim-ruby/vim-ruby'
+Plug 'godlygeek/tabular'
+Plug 'kien/ctrlp.vim'
+Plug 'felikz/ctrlp-py-matcher'
+Plug 'majutsushi/tagbar'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-easytags'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'rking/ag.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'SirVer/ultisnips'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
@@ -608,5 +602,7 @@ let g:ag_prg="ag"
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
+
+" settings for ctrlp
 
