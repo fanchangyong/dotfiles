@@ -123,8 +123,6 @@ set tm=500
 " Enable syntax highlighting
 syntax enable 
 
-colorscheme desert
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -432,15 +430,13 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
-Plug 'Solarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'fanchangyong/a.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'scrooloose/nerdcommenter'
-Plug 'bufmru.vim'
-"Plug 'justinmk/vim-sneak'
-Plug 'junegunn/seoul256.vim'
+"Plug 'bufmru.vim'
+Plug 'justinmk/vim-sneak'
 Plug 'uarun/vim-protobuf'
-"Plug 'roman/golden-ratio'
+Plug 'roman/golden-ratio'
 Plug 'tpope/vim-fugitive'
 "Plug 'christoomey/vim-tmux-navigator'
 Plug 'moll/vim-node'
@@ -470,6 +466,9 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-surround'
+Plug 'kana/vim-smartinput'
+Plug 'Lokaltog/vim-easymotion'
 
 call plug#end()
 filetype plugin indent on
@@ -492,10 +491,10 @@ let NERDTreeShowLineNumbers=1
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
 
-noremap <Up> <Nop>
+"noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
-"noremap <Right> <Nop>
+noremap <Right> <Nop>
 
 noremap k gk
 noremap gk k
@@ -578,7 +577,7 @@ set modelines=5
 nnoremap ; :
 nnoremap : ;
 
-set pastetoggle=<Right>
+set pastetoggle=<Up>
 
 set tags=./tags;/
 
@@ -606,3 +605,6 @@ let g:indent_guides_enable_on_vim_startup = 0
 
 " settings for ctrlp
 
+colorscheme desert
+set background=dark
+let g:sneak#s_next = 1
