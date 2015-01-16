@@ -512,7 +512,7 @@ noremap \ ,
 
 " Enable Relative Line Number to conveniently use [count] with commands
 set rnu
-"set nu
+set nu
 
 " Automatically Generate ctags file When We Save Our File
 " But because its cost of performance (It may generate tag file EVERY TIME when we save our file),We disable it now
@@ -605,7 +605,8 @@ let g:easytags_async=1
 let g:ag_prg="ag"
 
 " settings for indent-guides
-let g:indent_guides_auto_colors = 1
-let g:indent_guides_color_change_percent = 50
-hi IndentGuidesOdd  ctermbg=black
-hi IndentGuidesEven ctermbg=darkgrey
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+let g:indent_guides_enable_on_vim_startup = 1
+
