@@ -139,9 +139,6 @@ export EDITOR=vim
 
 #export GOROOT=/usr/local/go
 
-export DYLD_LIBRARY_PATH="/usr/local/lib:/usr/local/mysql/lib"
-export LD_LIBRARY_PATH="$DYLD_LIBRARY_PATH"
-
 if [ -e "~/.git-completion.bash" ]; then
 	echo "sourcing git completion"
 	source "~/.git-completion.bash"
