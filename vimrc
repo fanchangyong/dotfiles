@@ -436,8 +436,6 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'justinmk/vim-sneak'
 Plug 'uarun/vim-protobuf'
 Plug 'roman/golden-ratio'
-Plug 'tpope/vim-fugitive'
-"Plug 'christoomey/vim-tmux-navigator'
 Plug 'moll/vim-node'
 Plug 'ton/vim-bufsurf'
 " Vim plugin for Io language
@@ -466,9 +464,19 @@ Plug 'rking/ag.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-surround'
-Plug 'kana/vim-smartinput'
+"Plug 'kana/vim-smartinput'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-repeat'
+
+" jelera/vim-javascript-syntax is better than
+" pangloss/vim-javascript ,because its syntax
+" is more beautiful
+Plug 'jelera/vim-javascript-syntax' 
+Plug 'klen/python-mode'
+Plug 'shougo/unite.vim'
+Plug 'wincent/command-t'
+Plug 'tpope/vim-fugitive'
+Plug 'raimondi/delimitmate'
 
 call plug#end()
 filetype plugin indent on
@@ -491,7 +499,7 @@ let NERDTreeShowLineNumbers=1
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
 
-"noremap <Up> <Nop>
+noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
@@ -577,7 +585,7 @@ set modelines=5
 nnoremap ; :
 nnoremap : ;
 
-set pastetoggle=<Up>
+set pastetoggle=<F6>
 
 set tags=./tags;/
 
@@ -603,8 +611,18 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 let g:indent_guides_enable_on_vim_startup = 0
 
+"settings for javascript
+let javascript_enable_domhtmlcss=1
+
 " settings for ctrlp
 
+" colorscheme
 colorscheme desert
 set background=dark
+
+" settings for sneak
 let g:sneak#s_next = 1
+
+"settings for vim-better-space
+let g:better_whitespace_filetypes_blacklist=['help','unite']
+
