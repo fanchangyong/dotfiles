@@ -615,6 +615,7 @@ let g:indent_guides_enable_on_vim_startup = 0
 let javascript_enable_domhtmlcss=1
 
 " settings for ctrlp
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 " colorscheme
 colorscheme desert
