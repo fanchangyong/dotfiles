@@ -602,6 +602,11 @@ let g:session_autoload='yes'
 
 " settings for vim-easytags
 let g:easytags_async=1
+let g:easytags_dynamic_files = 1
+let g:easytags_auto_highlight = 0
+let g:easytags_on_cursorhold = 0
+let g:easytags_by_filetype = "~/.vim/tags"
+let g:easytags_events = ['BufWritePost']
 
 " settings for ag.vim
 let g:ag_prg="ag"
