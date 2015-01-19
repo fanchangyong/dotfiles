@@ -59,7 +59,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 " Fast saving
-nnoremap <leader>w :w!<cr>
+"nnoremap <leader>w :w!<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -464,8 +464,7 @@ Plug 'rking/ag.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'tpope/vim-surround'
-"Plug 'kana/vim-smartinput'
+Plug 'kana/vim-smartinput'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-repeat'
 
