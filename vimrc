@@ -457,7 +457,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'felikz/ctrlp-py-matcher'
 Plug 'majutsushi/tagbar'
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+"Plug 'xolox/vim-session'
 Plug 'xolox/vim-easytags'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
@@ -597,8 +597,8 @@ let g:tagbar_autoclose=1
 noremap <leader>z :TagbarToggle<cr>
 
 " settings for vim-sessions
-let g:session_autosave='yes'
-let g:session_autoload='yes'
+"let g:session_autosave='yes'
+"let g:session_autoload='yes'
 
 " settings for vim-easytags
 let g:easytags_async=1
