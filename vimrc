@@ -523,8 +523,8 @@ nnoremap <leader>v  :vsplit<cr>
 nnoremap <leader>h  :split<cr>
 nnoremap <leader>ev :edit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap H 0
-nnoremap L $
+" nnoremap H 0
+" nnoremap L $
 
 "set list
 "set listchars=tab:⊙→,nbsp:.
@@ -576,8 +576,8 @@ syntax on
 set path=.,/usr/include,,,$PWD/**
 
 nnoremap <leader>a :Ag
-nnoremap gn :BufSurfForward<cr>
-nnoremap gp :BufSurfBack<cr>
+nnoremap H  :BufSurfBack<cr>
+nnoremap L  :BufSurfForward<cr>
 
 set modeline
 set modelines=5
@@ -640,3 +640,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+set cursorline
+set cursorcolumn
