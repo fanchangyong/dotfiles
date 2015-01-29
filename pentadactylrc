@@ -1,8 +1,17 @@
+" vim: ft=vim
+"
+" Options
 set scrollsteps=1
 set scrolltime=0
-set go+=n
-set editor=vi
+set go=bCrsn
+set editor=vim
 set hintkeys=asdfghjkl;zxcvbnm
+set downloadsort=-active,-speed,-complete,-date
+set incfind
+set hlfind
+set popups=resized
+
+" maps
 nmap -builtin d D
 nmap -builtin D d
 nmap -builtin <C-h> <C-p>
@@ -18,4 +27,9 @@ nmap -builtin zj ZI
 nmap -builtin zl ZR
 nmap -builtin zk ZO
 
+nmap -builtin <C-g> :pageinfo<cr>
+
+nmap , <Leader>
+
 colorscheme solarized-dark
+

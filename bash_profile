@@ -157,7 +157,7 @@ alias staging="ssh ubuntu@e.blingstorm.com.cn -p 5022"
 linode_ip="23.239.9.105"
 alias linode="ssh root@$linode_ip"
 
-aws_ip="54.68.202.147"
+aws_ip="54.65.178.152"
 alias aws="ssh ubuntu@$aws_ip"
 alias socks="ssh -ND 5555 ubuntu@$aws_ip"
 
