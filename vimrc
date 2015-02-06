@@ -478,6 +478,8 @@ Plug 'wincent/command-t'
 Plug 'tpope/vim-fugitive'
 Plug 'raimondi/delimitmate'
 
+Plug 'chase/vim-ansible-yaml'
+
 call plug#end()
 filetype plugin indent on
 
@@ -546,7 +548,6 @@ nnoremap <leader>q :q<cr>
 "nnoremap <leader>qa :qa<cr>
 "cabbrev q <nop>
 "cabbrev w <nop>
-nnoremap <leader>l :ls<cr>
 
 nnoremap <leader>1 1<c-^>
 nnoremap <leader>2 2<c-^>
@@ -643,3 +644,5 @@ let g:UltiSnipsEditSplit="vertical"
 
 set cursorline
 set cursorcolumn
+
+nnoremap <leader>l :ls<CR>:b<Space>
