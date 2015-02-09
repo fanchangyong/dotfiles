@@ -213,3 +213,6 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
 #HADOOP VARIABLES END
 
 # pyenv
+
+# mysql prompt
+export MYSQL_PS1="\U [\d]> "
