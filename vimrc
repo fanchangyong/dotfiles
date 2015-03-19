@@ -464,7 +464,7 @@ Plug 'rking/ag.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'kana/vim-smartinput'
+"Plug 'kana/vim-smartinput'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-repeat'
 
@@ -476,7 +476,7 @@ Plug 'klen/python-mode'
 Plug 'shougo/unite.vim'
 Plug 'wincent/command-t'
 Plug 'tpope/vim-fugitive'
-Plug 'raimondi/delimitmate'
+"Plug 'raimondi/delimitmate'
 
 Plug 'chase/vim-ansible-yaml'
 
