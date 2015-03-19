@@ -31,5 +31,5 @@ nmap -builtin <C-g> :pageinfo<cr>
 
 nmap , <Leader>
 
-colorscheme solarized-dark
+"colorscheme solarized-dark
 
