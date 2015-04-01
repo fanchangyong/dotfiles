@@ -479,6 +479,7 @@ Plug 'tpope/vim-fugitive'
 "Plug 'raimondi/delimitmate'
 
 Plug 'chase/vim-ansible-yaml'
+Plug 'junegunn/fzf'
 
 call plug#end()
 filetype plugin indent on
@@ -621,7 +622,8 @@ let g:indent_guides_enable_on_vim_startup = 0
 let javascript_enable_domhtmlcss=1
 
 " settings for ctrlp
-let g:ctrlp_cmd = 'CtrlPMixed'
+"let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_max_files=0
 
 " colorscheme
 colorscheme desert
@@ -646,3 +648,12 @@ set cursorline
 set cursorcolumn
 
 nnoremap <leader>l :ls<CR>:b<Space>
+
+" settings for pymode
+let g:pymode_lint = 0
+let g:pymode_lint_cwindow = 0
+set completeopt=menu
+
+" settings for fzf
+nnoremap <silent><C-M> :FZF -m<CR>
+set noautochdir
