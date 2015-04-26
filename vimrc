@@ -657,3 +657,9 @@ set completeopt=menu
 " settings for fzf
 nnoremap <silent><C-M> :FZF -m<CR>
 set noautochdir
+
+" settings for syntastic
+let g:syntastic_mode_map = {
+			\	'mode': 'active',
+			\'passive_filetypes': ['java']
+			\}
