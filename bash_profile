@@ -216,3 +216,7 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
 
 # mysql prompt
 export MYSQL_PS1="\u@\h [\d]> "
+
+if [ -e '~/.bash_profile_local.conf' ]; then
+  source ~/.bash_profile_local.conf
+fi
