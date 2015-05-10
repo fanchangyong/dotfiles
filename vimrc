@@ -484,6 +484,7 @@ Plug 'sukima/xmledit'
 "Plug 'junegunn/fzf'
 "Plug 'jaxbot/semantic-highlight.vim'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 filetype plugin indent on
@@ -670,3 +671,6 @@ let g:syntastic_mode_map = {
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
+" settings for jedi
+let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#goto_definitions_command = '<C-]>'
