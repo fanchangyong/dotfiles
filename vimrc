@@ -163,7 +163,7 @@ set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
-set tw=500
+set tw=80
 
 set ai "Auto indent
 set si "Smart indent
@@ -435,7 +435,7 @@ Plug 'fanchangyong/a.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'justinmk/vim-sneak'
 Plug 'uarun/vim-protobuf'
-Plug 'roman/golden-ratio'
+"Plug 'roman/golden-ratio'
 Plug 'moll/vim-node'
 Plug 'ton/vim-bufsurf'
 " Vim plugin for Io language
@@ -474,13 +474,16 @@ Plug 'tpope/vim-repeat'
 Plug 'jelera/vim-javascript-syntax' 
 Plug 'klen/python-mode'
 Plug 'shougo/unite.vim'
-Plug 'wincent/command-t'
+"Plug 'wincent/command-t'
 Plug 'tpope/vim-fugitive'
 Plug 'raimondi/delimitmate'
 
 Plug 'chase/vim-ansible-yaml'
 Plug 'junegunn/fzf'
 Plug 'sukima/xmledit'
+"Plug 'junegunn/fzf'
+"Plug 'jaxbot/semantic-highlight.vim'
+Plug 'jeetsukumaran/vim-buffergator'
 
 call plug#end()
 filetype plugin indent on
@@ -656,7 +659,7 @@ let g:pymode_lint_cwindow = 0
 set completeopt=menu
 
 " settings for fzf
-nnoremap <silent><C-M> :FZF -m<CR>
+"nnoremap <silent><C-M> :FZF -m<CR>
 set noautochdir
 
 " settings for syntastic
