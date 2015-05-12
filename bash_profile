@@ -124,12 +124,14 @@ else
 fi
 PS1+=$Color_Off #end setting color
 
-export GOPATH=~/test/go
+export GOPATH=~/go
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
 PATH+=":$HOME/.rvm/bin"
-PATH="/usr/local/openresty/nginx/sbin:$PATH"
+PATH="~/openresty/nginx/sbin:$PATH"
+#PATH="/usr/local/openresty/nginx/sbin:$PATH"
 PATH="~/.composer/vendor/bin/:$PATH"
 PATH="$HOME/.pyenv/bin:$PATH"
+PATH="$PATH:/usr/local/apache-maven/apache-maven-3.3.1/bin"
 
 export PS1
 export DOTFILE_DIR
