@@ -124,7 +124,7 @@ else
 fi
 PS1+=$Color_Off #end setting color
 
-export GOPATH=~/test/go
+export GOPATH=~/go
 PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
 PATH+=":$HOME/.rvm/bin"
 PATH="~/openresty/nginx/sbin:$PATH"
