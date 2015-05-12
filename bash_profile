@@ -92,7 +92,7 @@ alias src="cd ~/repos/proj_golang/src/zerogame.info/thserver/"
 alias cdgpkg="cd ~/repos/proj_golang/pkg/darwin_amd64/"
 alias pkg="cd ~/repos/proj_golang/pkg/darwin_amd64/zerogame.info/thserver/"
 alias de="cd ~/dev/thserver"
-alias dev="cd ~/dev/thserver;vim"
+alias dev="ssh fanchangyong@10.4.17.164"
 
 ################################################
 ################## end dev #####################
@@ -201,6 +201,10 @@ ulimit -n 100000 2> /dev/null
 
 #HADOOP VARIABLES START
 export JAVA_HOME=/usr/lib/jvm/default-java
+if [[ $os = "Darwin" ]]
+then
+	export JAVA_HOME=$(/usr/libexec/java_home)
+fi
 export HADOOP_PREFIX=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_PREFIX/bin
 export PATH=$PATH:$HADOOP_PREFIX/sbin
@@ -217,6 +221,6 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
 # mysql prompt
 export MYSQL_PS1="\u@\h [\d]> "
 
-if [ -e '~/.bash_profile_local.conf' ]; then
+if [ -f ~/.bash_profile_local.conf ]; then
   source ~/.bash_profile_local.conf
 fi
