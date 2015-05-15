@@ -1,5 +1,16 @@
 PWD=`pwd`
+
+os=`uname -s`
+
 ln -f -s "$PWD/bash_profile" ~/.bash_profile
+if [[ $os = "Darwin" ]]
+then
+	ln -f -s "$PWD/bash_profile_local_osx.conf" ~/.bash_profile_local.conf
+elif [[ $os = "Linux" ]]
+then
+	ln -f -s "$PWD/bash_profile_local_linux.conf" ~/.bash_profile_local.conf
+fi
+
 ln -f -s "$PWD/vimrc" ~/.vimrc
 ln -f -s "$PWD/tmux.conf" ~/.tmux.conf
 ln -f -s "$PWD/lldbinit" ~/.lldbinit

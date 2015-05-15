@@ -76,28 +76,7 @@ alias cd..="cd ../"
 
 alias dot="cd $DOTFILE_DIR"
 
-################################################
-################## for dev #####################
-################################################
-
-alias ubuntu="ssh ubuntu@42.62.77.86"
-alias deployer="ssh deployer@42.62.77.86"
-alias onekey="cd /Users/kevin/repos/proj_golang/src/zerogame.info/thserver/&& ./one_key_dev.sh&& cd -"
-alias down="cd ~/Downloads/"
-alias cdg="cd ~/repos/proj_golang"
-alias cdgbin="cd ~/repos/proj_golang/bin/"
-alias bin="cd ~/repos/proj_golang/bin/"
-alias cdgsrc="cd ~/repos/proj_golang/src/zerogame.info/thserver/"
-alias src="cd ~/repos/proj_golang/src/zerogame.info/thserver/"
-alias cdgpkg="cd ~/repos/proj_golang/pkg/darwin_amd64/"
-alias pkg="cd ~/repos/proj_golang/pkg/darwin_amd64/zerogame.info/thserver/"
-alias de="cd ~/dev/thserver"
 alias dev="ssh fanchangyong@10.4.17.164"
-
-################################################
-################## end dev #####################
-################################################
-
 
 if [[ $os = "Linux" ]]
 then
@@ -125,13 +104,8 @@ fi
 PS1+=$Color_Off #end setting color
 
 export GOPATH=~/go
-PATH="/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/sbin:$GOPATH/bin"
-PATH+=":$HOME/.rvm/bin"
-PATH="~/openresty/nginx/sbin:$PATH"
-#PATH="/usr/local/openresty/nginx/sbin:$PATH"
-PATH="~/.composer/vendor/bin/:$PATH"
-PATH="$HOME/.pyenv/bin:$PATH"
-PATH="$PATH:/usr/local/apache-maven/apache-maven-3.3.1/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"
+export PATH+=":$GOPATH"
 
 export PS1
 export DOTFILE_DIR
@@ -187,12 +161,6 @@ function loadnvm()
 	fi
 }
 
-
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/kevin/Downloads/cocos2d-js-v3.0-rc1/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
 # locales
 export LC_TIME=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -201,22 +169,6 @@ export LC_ALL=en_US.UTF-8
 # open files limit
 ulimit -n 100000 2> /dev/null
 
-#HADOOP VARIABLES START
-export JAVA_HOME=/usr/lib/jvm/default-java
-if [[ $os = "Darwin" ]]
-then
-	export JAVA_HOME=$(/usr/libexec/java_home)
-fi
-export HADOOP_PREFIX=/usr/local/hadoop
-export PATH=$PATH:$HADOOP_PREFIX/bin
-export PATH=$PATH:$HADOOP_PREFIX/sbin
-export HADOOP_MAPRED_HOME=$HADOOP_PREFIX
-export HADOOP_COMMON_HOME=$HADOOP_PREFIX
-export HADOOP_HDFS_HOME=$HADOOP_PREFIX
-export YARN_HOME=$HADOOP_PREFIX
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_PREFIX/lib/native
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
-#HADOOP VARIABLES END
 
 # pyenv
 
