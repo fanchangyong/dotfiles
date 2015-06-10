@@ -615,9 +615,6 @@ let g:easytags_on_cursorhold = 0
 let g:easytags_by_filetype = "~/.vim/tags"
 let g:easytags_events = ['BufWritePost']
 
-" settings for ag.vim
-let g:ag_prg="ag"
-
 " settings for indent-guides
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
@@ -677,3 +674,9 @@ let g:delimitMate_expand_cr=1
 " settings for jedi
 let g:jedi#use_tabs_not_buffers = 0
 "let g:jedi#goto_definitions_command = '<C-]>'
+
+
+" for local settings
+if filereadable("~/.vimrc_local")
+	source "~/.vimrc_local"
+endif
