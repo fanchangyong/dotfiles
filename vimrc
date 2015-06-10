@@ -445,12 +445,12 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'ntpeters/vim-better-whitespace'
 " Vim plugin for scala
 Plug 'derekwyatt/vim-scala'
-Plug 'fatih/vim-go'
+"Plug 'fatih/vim-go'
 Plug 'digitaltoad/vim-jade'
-Plug 'andrep/vimacs'
+" Plug 'andrep/vimacs'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
-Plug 'mhinz/vim-startify'
+"Plug 'mhinz/vim-startify'
 Plug 'vim-ruby/vim-ruby'
 Plug 'godlygeek/tabular'
 Plug 'kien/ctrlp.vim'
@@ -485,6 +485,7 @@ Plug 'sukima/xmledit'
 "Plug 'jaxbot/semantic-highlight.vim'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'davidhalter/jedi-vim'
+Plug 'Conque-Shell'
 
 call plug#end()
 filetype plugin indent on
@@ -651,6 +652,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 set cursorline
 set cursorcolumn
+
+set clipboard=unnamed
 
 nnoremap <leader>l :ls<CR>:b<Space>
 
