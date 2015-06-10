@@ -486,6 +486,7 @@ Plug 'sukima/xmledit'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'davidhalter/jedi-vim'
 Plug 'Conque-Shell'
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 filetype plugin indent on
