@@ -64,7 +64,6 @@ alias tree='tree -C'
 alias cf=coffee
 alias dtrace='sudo dtrace'
 alias dtruss='sudo dtruss'
-alias docker='sudo docker'
 
 #alias top="top ${top_arg}"
 alias ..="cd ../"
@@ -105,7 +104,7 @@ PS1+=$Color_Off #end setting color
 
 export GOPATH=~/go
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"
-export PATH+=":$GOPATH"
+export PATH+=":$GOPATH/bin"
 
 export PS1
 export DOTFILE_DIR
