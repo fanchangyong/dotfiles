@@ -445,7 +445,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'ntpeters/vim-better-whitespace'
 " Vim plugin for scala
 Plug 'derekwyatt/vim-scala'
-"Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 Plug 'digitaltoad/vim-jade'
 " Plug 'andrep/vimacs'
 Plug 'wting/rust.vim'
@@ -487,6 +487,9 @@ Plug 'jeetsukumaran/vim-buffergator'
 Plug 'davidhalter/jedi-vim'
 Plug 'Conque-Shell'
 Plug 'mileszs/ack.vim'
+Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
+Plug 'dgryski/vim-godef'
+Plug 'hdima/python-syntax'
 
 call plug#end()
 filetype plugin indent on
@@ -509,10 +512,10 @@ let NERDTreeShowLineNumbers=1
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
 
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+" noremap <Up> <Nop>
+" noremap <Down> <Nop>
+" noremap <Left> <Nop>
+" noremap <Right> <Nop>
 
 noremap k gk
 noremap gk k
@@ -581,6 +584,15 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['go']}
 
 set path=.,/usr/include,,,$PWD/**
 
@@ -670,6 +682,7 @@ let g:syntastic_mode_map = {
 			\'passive_filetypes': ['java']
 			\}
 let g:syntastic_check_on_open = 1
+let g:syntastic_python_pylint_post_args="--max-line-length=120"
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
@@ -682,3 +695,9 @@ let g:jedi#use_tabs_not_buffers = 0
 if filereadable("~/.vimrc_local")
 	source "~/.vimrc_local"
 endif
+
+" settings for godef
+let g:godef_same_file_in_same_window=1
+let g:godef_split=0
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
