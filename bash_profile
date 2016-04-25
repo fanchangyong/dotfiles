@@ -53,6 +53,7 @@ alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
 alias diff=colordiff
 alias df="df -h"
 alias g=git
+alias ng=nginx
 alias v=vagrant
 alias c='clear'
 alias quit='exit'
