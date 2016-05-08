@@ -25,6 +25,6 @@ fi
 
 if [[ $os = "Linux" ]]
 then
-	cmds="grc silversearcher-ag git"
+	cmds="grc silversearcher-ag git dstat exuberant-ctags"
 	sudo apt-get install $cmds
 fi

@@ -27,8 +27,8 @@ ln -f -s "$PWD/toprc" ~/.toprc
 
 
 # vim-plug
-# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-# 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install tools
 . install_tools.sh
