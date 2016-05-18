@@ -25,6 +25,6 @@ fi
 
 if [[ $os = "Linux" ]]
 then
-	cmds="grc silversearcher-ag git dstat exuberant-ctags"
+	cmds="grc silversearcher-ag git dstat exuberant-ctags tmux nethogs"
 	sudo apt-get install $cmds
 fi
