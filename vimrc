@@ -508,6 +508,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extr
 let g:ycm_confirm_extra_conf = 0
 let g:miniBufExplMaxSize = 1
 let NERDTreeShowLineNumbers=1
+let NERDTreeIgnore = ['\.pyc$']
 
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
@@ -661,7 +662,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
 set cursorline
-set cursorcolumn
+" set cursorcolumn
 
 set clipboard=unnamed
 
