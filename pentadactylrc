@@ -12,6 +12,8 @@ set hlfind
 set popups=resized
 
 " maps
+" nmap -builtin c D
+" nmap -builtin d <C-d>
 nmap -builtin d D
 nmap -builtin D d
 nmap -builtin <C-h> <C-p>
