@@ -138,6 +138,9 @@ aws_ip="54.65.178.152"
 alias aws="ssh ubuntu@$aws_ip"
 alias socks="ssh -ND 5555 ubuntu@$aws_ip"
 
+# automatically `ls` after `cd`
+cd() { builtin cd "$@" && ls; }
+
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
 export LESS_TERMCAP_me=$'\E[0m'
