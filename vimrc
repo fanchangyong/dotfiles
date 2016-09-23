@@ -484,7 +484,8 @@ Plug 'sukima/xmledit'
 "Plug 'junegunn/fzf'
 "Plug 'jaxbot/semantic-highlight.vim'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'davidhalter/jedi-vim'
+" Disabled jedi-vim because autocomplete is too long
+" Plug 'davidhalter/jedi-vim'
 Plug 'Conque-Shell'
 Plug 'mileszs/ack.vim'
 Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
