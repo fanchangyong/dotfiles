@@ -29,18 +29,19 @@ ssh  $USER_HOST <<'ENDSSH1'
 	mkdir -p $HOME/.ssh
 	chmod 600 $HOME/.ssh
 	cd $HOME/.ssh
-	cp /tmp/id_rsa.pub id_rsa.pub
+	mv /tmp/id_rsa.pub id_rsa.pub
 	chmod 600 id_rsa.pub
 ENDSSH1
 
 else
 	ssh  $USER_HOST <<'ENDSSH2'
 		mkdir -p $HOME/.ssh
-		chmod 600 $HOME/.ssh
+		chmod 700 $HOME/.ssh
 		cd $HOME/.ssh
 		touch authorized_keys
 		chmod 600 authorized_keys
 		cat /tmp/id_rsa.pub >> authorized_keys
+		rm -f /tmp/id_rsa.pub
 ENDSSH2
 
 fi
