@@ -152,7 +152,7 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-"set expandtab
+set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
@@ -642,6 +642,9 @@ let javascript_enable_domhtmlcss=1
 " settings for ctrlp
 "let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_max_files=0
+let g:ctrlp_custom_ignore = {
+  \ 'dir': 'node_modules'
+  \}
 
 " colorscheme
 colorscheme desert
