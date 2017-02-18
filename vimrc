@@ -211,14 +211,14 @@ noremap <leader>bd :Bclose<cr>
 noremap <leader>ba :1,1000 bd!<cr>
 
 " Useful mappings for managing tabs
-noremap <leader>tn :tabnew<cr>
-noremap <leader>to :tabonly<cr>
-noremap <leader>tc :tabclose<cr>
-noremap <leader>tm :tabmove<cr>
+" noremap <leader>tn :tabnew<cr>
+" noremap <leader>to :tabonly<cr>
+" noremap <leader>tc :tabclose<cr>
+" noremap <leader>tm :tabmove<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+" noremap <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
 "noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
@@ -338,26 +338,26 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pressing ,ss will toggle and untoggle spell checking
-noremap <leader>ss :setlocal spell!<cr>
+" noremap <leader>ss :setlocal spell!<cr>
 
-" Shortcuts using <leader>
-noremap <leader>sn ]s
-noremap <leader>sp [s
-noremap <leader>sa zg
-noremap <leader>s? z=
+" " Shortcuts using <leader>
+" noremap <leader>sn ]s
+" noremap <leader>sp [s
+" noremap <leader>sa zg
+" noremap <leader>s? z=
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+" noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Quickly open a buffer for scripbble
 " noremap <leader>q :e ~/buffer<cr>
 
 " Toggle paste mode on and off
-noremap <leader>pp :setlocal paste!<cr>
+noremap <leader>p :setlocal paste!<cr>
 
 
 
@@ -424,7 +424,6 @@ endfunction
 " For plug.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-commentary'
@@ -483,7 +482,7 @@ Plug 'junegunn/fzf'
 Plug 'sukima/xmledit'
 "Plug 'junegunn/fzf'
 "Plug 'jaxbot/semantic-highlight.vim'
-Plug 'jeetsukumaran/vim-buffergator'
+" Plug 'jeetsukumaran/vim-buffergator'
 " Disabled jedi-vim because autocomplete is too long
 " Plug 'davidhalter/jedi-vim'
 Plug 'Conque-Shell'
@@ -503,7 +502,7 @@ inoremap <c-j> <Down>
 inoremap <c-k> <Up>
 inoremap <c-l> <Right>
 
-noremap <leader>nt :NERDTreeToggle<CR>
+noremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -549,8 +548,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 onoremap in( :<c-u>normal! f(vi(<cr>
 onoremap il( :<c-u>normal! F)vi(<cr>
 
-cabbrev h tab help
-cabbrev help tab help
+" cabbrev h tab help
+" cabbrev help tab help
 augroup ft_cmd
 	autocmd!
 	autocmd FileType help set rnu
