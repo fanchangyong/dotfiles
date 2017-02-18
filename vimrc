@@ -705,3 +705,6 @@ let g:godef_same_file_in_same_window=1
 let g:godef_split=0
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
+
+" delete without yank to register
+nnoremap <leader>d "_dd
