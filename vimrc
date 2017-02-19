@@ -490,6 +490,7 @@ Plug 'mileszs/ack.vim'
 Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
 Plug 'dgryski/vim-godef'
 Plug 'hdima/python-syntax'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 filetype plugin indent on
