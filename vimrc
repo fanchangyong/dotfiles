@@ -460,7 +460,8 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'rking/ag.vim'
-Plug 'nathanaelkane/vim-indent-guides'
+" Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Yggdroot/indentLine'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 "Plug 'kana/vim-smartinput'
@@ -492,6 +493,7 @@ Plug 'dgryski/vim-godef'
 Plug 'hdima/python-syntax'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'christoomey/vim-system-copy'
 
 call plug#end()
 filetype plugin indent on
@@ -711,3 +713,6 @@ au FileType go nmap <leader>b <Plug>(go-build)
 
 " delete without yank to register
 nnoremap <leader>d "_dd
+
+" settings for indentLine
+let g:indentLine_char = '┆'
