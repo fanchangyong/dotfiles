@@ -491,12 +491,13 @@ Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
 Plug 'dgryski/vim-godef'
 Plug 'hdima/python-syntax'
 Plug 'tpope/vim-surround'
+Plug 'vim-scripts/ReplaceWithRegister'
 
 call plug#end()
 filetype plugin indent on
 
-:nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-:nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+" :nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+" :nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 
 inoremap <c-h> <Left>
 inoremap <c-j> <Down>
