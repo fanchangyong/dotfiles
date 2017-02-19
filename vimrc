@@ -716,3 +716,4 @@ nnoremap <leader>d "_dd
 
 " settings for indentLine
 let g:indentLine_char = '┆'
+set showbreak=↪\ 
