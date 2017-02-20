@@ -719,3 +719,6 @@ nnoremap <leader>d "_dd
 
 " settings for indentLine
 let g:indentLine_char = '┆'
+
+" Automatically resize Vim window when parent window resized
+autocmd! VimResized * wincmd =
