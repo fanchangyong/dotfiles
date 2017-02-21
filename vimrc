@@ -602,7 +602,7 @@ let g:go_highlight_build_constraints = 1
 
 set path=.,/usr/include,,,$PWD/**
 
-nnoremap <leader>a :Ag
+nnoremap <leader>a :Ag<Space>
 nnoremap H  :BufSurfBack<cr>
 nnoremap L  :BufSurfForward<cr>
 
@@ -621,6 +621,9 @@ let g:tagbar_width=25
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
 noremap <leader>z :TagbarToggle<cr>
+
+" settings for ag.vim
+let g:ag_highlight=1
 
 " settings for vim-sessions
 "let g:session_autosave='yes'
@@ -717,3 +720,6 @@ nnoremap <leader>d "_dd
 " settings for indentLine
 let g:indentLine_char = '┆'
 set showbreak=↪\ 
+
+" Automatically resize Vim window when parent window resized
+autocmd! VimResized * wincmd =
