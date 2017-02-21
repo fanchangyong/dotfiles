@@ -719,6 +719,8 @@ nnoremap <leader>d "_dd
 
 " settings for indentLine
 let g:indentLine_char = '┆'
+let g:indentLine_fileType = ['javascript', 'python']
+
 set showbreak=↪\ 
 
 " Automatically resize Vim window when parent window resized
