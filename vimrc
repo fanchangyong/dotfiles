@@ -494,6 +494,7 @@ Plug 'hdima/python-syntax'
 Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
+Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 
 call plug#end()
