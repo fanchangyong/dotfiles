@@ -496,6 +496,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 filetype plugin indent on
@@ -697,6 +698,7 @@ let g:syntastic_mode_map = {
 			\}
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_pylint_post_args="--max-line-length=120"
+let g:syntastic_javascript_checkers=['eslint']
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
