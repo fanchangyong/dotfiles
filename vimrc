@@ -497,6 +497,7 @@ Plug 'christoomey/vim-system-copy'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'wavded/vim-stylus'
 
 call plug#end()
 filetype plugin indent on
@@ -693,7 +694,7 @@ set noautochdir
 
 " settings for syntastic
 let g:syntastic_mode_map = {
-			\	'mode': 'active',
+			\	'mode': 'passive',
 			\'passive_filetypes': ['java']
 			\}
 let g:syntastic_check_on_open = 1
