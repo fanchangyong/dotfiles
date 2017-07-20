@@ -498,6 +498,7 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'wavded/vim-stylus'
+" Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 filetype plugin indent on
@@ -545,7 +546,6 @@ set nu
 nnoremap <leader>v  :vsplit<cr>
 nnoremap <leader>h  :split<cr>
 nnoremap <leader>ev :edit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
 " nnoremap H 0
 " nnoremap L $
 
@@ -691,6 +691,8 @@ set completeopt=menu
 set noautochdir
 
 " settings for syntastic
+nnoremap <leader>sc :SyntasticCheck<cr>
+nnoremap <leader>st  :SyntasticToggle<cr>
 let g:syntastic_mode_map = {
 			\	'mode': 'passive',
 			\'passive_filetypes': ['java']
@@ -723,9 +725,12 @@ nnoremap <leader>d "_dd
 
 " settings for indentLine
 let g:indentLine_char = '┆'
-let g:indentLine_fileType = ['javascript', 'python']
+let g:indentLine_fileType = ['javascript', 'python', 'javascript.jsx', 'stylus', 'pug']
 
 set showbreak=↪\ 
 
 " Automatically resize Vim window when parent window resized
 autocmd! VimResized * wincmd =
+
+" Enable vim-jsx in .js files:
+let g:jsx_ext_required = 1
