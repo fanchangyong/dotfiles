@@ -165,6 +165,8 @@ function loadnvm()
 	fi
 }
 
+loadnvm
+
 # locales
 export LC_TIME=en_US.UTF-8
 export LANG=en_US.UTF-8
