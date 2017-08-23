@@ -129,7 +129,6 @@ mwiki() { dig +short txt "$*".wp.dg.cx; }
 qingyun_ip="121.201.8.37"
 alias qingyun_root="ssh root@$qingyun_ip"
 alias qingyun="ssh ubuntu@$qingyun_ip"
-alias staging="ssh ubuntu@e.blingstorm.com.cn -p 5022"
 
 linode_ip="23.239.9.105"
 alias linode="ssh root@$linode_ip"
@@ -165,7 +164,8 @@ function loadnvm()
 	fi
 }
 
-loadnvm
+# 加了这个，会导致新开一个窗口的时候很慢
+# loadnvm
 
 # locales
 export LC_TIME=en_US.UTF-8
@@ -184,3 +184,6 @@ export MYSQL_PS1="\u@\h [\d]> "
 if [ -f ~/.bash_profile_local.conf ]; then
   source ~/.bash_profile_local.conf
 fi
+
+# Disable ansible cowsay: https://michaelheap.com/cowsay-and-ansible/
+export ANSIBLE_NOCOWS=1
