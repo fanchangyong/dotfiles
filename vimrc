@@ -498,7 +498,8 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'wavded/vim-stylus'
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
+Plug 'posva/vim-vue'
 
 call plug#end()
 filetype plugin indent on
@@ -514,7 +515,8 @@ inoremap <c-l> <Right>
 noremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 1
+let g:ycm_server_python_interpreter="/usr/bin/python"
 let g:miniBufExplMaxSize = 1
 let NERDTreeShowLineNumbers=1
 let NERDTreeIgnore = ['\.pyc$']
