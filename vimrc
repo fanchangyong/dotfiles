@@ -424,82 +424,74 @@ endfunction
 " For plug.vim
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-commentary'
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-user'
-Plug 'altercation/vim-colors-solarized'
-Plug 'fanchangyong/a.vim'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'justinmk/vim-sneak'
-Plug 'uarun/vim-protobuf'
-"Plug 'roman/golden-ratio'
+" 1. Launguages
 Plug 'moll/vim-node'
-Plug 'ton/vim-bufsurf'
-" Vim plugin for Io language
 Plug 'andreimaxim/vim-io'
-" Vim plugin for coffee script
 Plug 'kchmck/vim-coffee-script'
-Plug 'ntpeters/vim-better-whitespace'
-" Vim plugin for scala
 Plug 'derekwyatt/vim-scala'
 Plug 'fatih/vim-go'
+Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
+Plug 'dgryski/vim-godef'
 Plug 'digitaltoad/vim-jade'
-" Plug 'andrep/vimacs'
 Plug 'wting/rust.vim'
 Plug 'cespare/vim-toml'
-"Plug 'mhinz/vim-startify'
 Plug 'vim-ruby/vim-ruby'
-Plug 'godlygeek/tabular'
+Plug 'klen/python-mode'
+Plug 'hdima/python-syntax'
+Plug 'posva/vim-vue'
+Plug 'uarun/vim-protobuf'
+Plug 'wavded/vim-stylus'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+" Plug 'sukima/xmledit'
+
+" 2. Autocompletion
+Plug 'Valloric/YouCompleteMe'
+Plug 'mattn/emmet-vim'
+
+" 3. Navigation
+Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'felikz/ctrlp-py-matcher'
+
+" 4. Pretty display
+Plug 'altercation/vim-colors-solarized'
+Plug 'Yggdroot/indentLine'
+
+
+Plug 'w0rp/ale'
+Plug 'kana/vim-textobj-entire'
+" vim-textobj-user is required by kana/vim-textobj-entire
+Plug 'kana/vim-textobj-user'
+Plug 'fanchangyong/a.vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+" Plug 'justinmk/vim-sneak'
+Plug 'ton/vim-bufsurf'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'godlygeek/tabular'
 Plug 'majutsushi/tagbar'
 Plug 'xolox/vim-misc'
-"Plug 'xolox/vim-session'
 Plug 'xolox/vim-easytags'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'rking/ag.vim'
-" Plug 'nathanaelkane/vim-indent-guides'
-Plug 'Yggdroot/indentLine'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 "Plug 'kana/vim-smartinput'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'tpope/vim-repeat'
 
-" jelera/vim-javascript-syntax is better than
-" pangloss/vim-javascript ,because its syntax
-" is more beautiful
-Plug 'jelera/vim-javascript-syntax' 
-Plug 'klen/python-mode'
 Plug 'shougo/unite.vim'
-"Plug 'wincent/command-t'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'raimondi/delimitmate'
 
 Plug 'chase/vim-ansible-yaml'
-Plug 'junegunn/fzf'
-Plug 'sukima/xmledit'
-"Plug 'junegunn/fzf'
-"Plug 'jaxbot/semantic-highlight.vim'
-" Plug 'jeetsukumaran/vim-buffergator'
-" Disabled jedi-vim because autocomplete is too long
-" Plug 'davidhalter/jedi-vim'
-Plug 'Conque-Shell'
 Plug 'mileszs/ack.vim'
-Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
-Plug 'dgryski/vim-godef'
-Plug 'hdima/python-syntax'
-Plug 'tpope/vim-surround'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
-Plug 'mxw/vim-jsx'
-Plug 'mattn/emmet-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'wavded/vim-stylus'
-Plug 'Valloric/YouCompleteMe'
-Plug 'posva/vim-vue'
 
 call plug#end()
 filetype plugin indent on
@@ -606,7 +598,14 @@ let g:go_highlight_build_constraints = 1
 
 set path=.,/usr/include,,,$PWD/**
 
-nnoremap <leader>a :Ag<Space>
+" settings for Ack.vim
+let g:ackhighlight = 1
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+nnoremap <leader>a :Ack<Space>
+
 nnoremap H  :BufSurfBack<cr>
 nnoremap L  :BufSurfForward<cr>
 
@@ -625,9 +624,6 @@ let g:tagbar_width=25
 let g:tagbar_autofocus=1
 let g:tagbar_autoclose=1
 noremap <leader>z :TagbarToggle<cr>
-
-" settings for ag.vim
-let g:ag_highlight=1
 
 " settings for vim-sessions
 "let g:session_autosave='yes'
@@ -693,17 +689,11 @@ set completeopt=menu
 "nnoremap <silent><C-M> :FZF -m<CR>
 set noautochdir
 
-" settings for syntastic
-nnoremap <leader>sc :SyntasticCheck<cr>
-nnoremap <leader>st  :SyntasticToggle<cr>
-let g:syntastic_mode_map = {
-			\	'mode': 'passive',
-			\'passive_filetypes': ['java']
-			\}
-let g:syntastic_check_on_open = 1
-let g:syntastic_python_pylint_post_args="--max-line-length=120"
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" settings for ALE
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+let g:ale_lint_on_text_changed = 'never'
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
