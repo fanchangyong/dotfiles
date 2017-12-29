@@ -12,6 +12,7 @@ then
 fi
 
 ln -f -s "$PWD/vimrc" ~/.vimrc
+ln -f -s "$PWD/ideavimrc" ~/.ideavimrc
 ln -f -s "$PWD/tmux.conf" ~/.tmux.conf
 ln -f -s "$PWD/lldbinit" ~/.lldbinit
 ln -f -s "$PWD/psqlrc" ~/.psqlrc
