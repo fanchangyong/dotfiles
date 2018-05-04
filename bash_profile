@@ -40,7 +40,8 @@ alias egrep="egrep --color=auto -n"
 alias erlm="erl -man"
 alias mk=make
 alias m=make
-alias vi=vim
+# alias vi=nvim
+# alias vim=nvim
 alias l=ls
 alias ll="ls -l ${ls_color}"
 #alias .="source ~/.bash_profile"
@@ -105,7 +106,7 @@ fi
 PS1+=$Color_Off #end setting color
 
 export GOPATH=~/go
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"
 export PATH+=":$GOPATH/bin"
 
 export PS1
@@ -185,5 +186,16 @@ if [ -f ~/.bash_profile_local.conf ]; then
   source ~/.bash_profile_local.conf
 fi
 
+function swap()
+{
+  local TMPFILE=tmp.$$
+  mv "$1" $TMPFILE
+  mv "$2" "$1"
+  mv $TMPFILE "$2"
+}
+
 # Disable ansible cowsay: https://michaelheap.com/cowsay-and-ansible/
 export ANSIBLE_NOCOWS=1
+export NODE_TLS_REJECT_UNAUTHORIZED=0;
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

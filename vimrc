@@ -447,7 +447,7 @@ Plug 'pangloss/vim-javascript'
 " Plug 'sukima/xmledit'
 
 " 2. Autocompletion
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 
 " 3. Navigation
@@ -492,6 +492,8 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
+
+Plug 'botvs/VimBotVS'
 
 call plug#end()
 filetype plugin indent on
@@ -683,6 +685,7 @@ nnoremap <leader>l :ls<CR>:b<Space>
 " settings for pymode
 let g:pymode_lint = 0
 let g:pymode_lint_cwindow = 0
+let g:pymode_rope_lookup_project = 0
 set completeopt=menu
 
 " settings for fzf
@@ -727,3 +730,4 @@ autocmd! VimResized * wincmd =
 
 " Enable vim-jsx in .js files:
 let g:jsx_ext_required = 1
+
