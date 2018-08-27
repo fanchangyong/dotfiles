@@ -441,13 +441,12 @@ Plug 'hdima/python-syntax'
 Plug 'posva/vim-vue'
 Plug 'uarun/vim-protobuf'
 Plug 'wavded/vim-stylus'
-Plug 'jelera/vim-javascript-syntax'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 " Plug 'sukima/xmledit'
 
 " 2. Autocompletion
-" Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 
 " 3. Navigation
