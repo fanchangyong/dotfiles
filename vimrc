@@ -442,6 +442,7 @@ Plug 'posva/vim-vue'
 Plug 'uarun/vim-protobuf'
 Plug 'wavded/vim-stylus'
 Plug 'mxw/vim-jsx'
+Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 " Plug 'sukima/xmledit'
 
@@ -475,6 +476,8 @@ Plug 'xolox/vim-easytags'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'epilande/vim-es2015-snippets'
+Plug 'epilande/vim-react-snippets'
 "Plug 'kana/vim-smartinput'
 Plug 'Lokaltog/vim-easymotion'
 
@@ -667,8 +670,8 @@ let g:better_whitespace_filetypes_blacklist=['help','unite']
 
 "ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-l"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
 " If you want :UltiSnipsEdit to split your window.
