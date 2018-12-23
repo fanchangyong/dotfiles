@@ -1,6 +1,7 @@
 # vim: ft=sh
 # aliases,for abbreviation
 git config --global alias.co checkout
+git config --global alias.cl clone
 git config --global alias.br branch
 git config --global alias.df diff
 git config --global alias.st status
