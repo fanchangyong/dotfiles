@@ -23,6 +23,7 @@ ln -f -s "$PWD/agignore" ~/.agignore
 ln -f -s "$PWD/my.cnf" ~/.my.cnf
 ln -f -s "$PWD/grcat" ~/.grcat
 ln -f -s "$PWD/toprc" ~/.toprc
+ln -f -s "$PWD/tmuxp" ~/.tmuxp
 
 # for sshrc
 

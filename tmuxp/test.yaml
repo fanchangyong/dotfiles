@@ -1,0 +1,28 @@
+session_name: test
+start_directory: '~'
+windows:
+-
+  window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
+- window_name: shell
+  panes:
+  -
