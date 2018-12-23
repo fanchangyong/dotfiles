@@ -49,6 +49,7 @@ alias ll="ls -l ${ls_color}"
 alias so=source
 alias tma="tmux attach"
 alias tm=tmux
+alias tml="tmuxp load -y"
 alias eb="vim ~/.bash_profile" # Edit bash profile
 alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
 alias diff=colordiff
@@ -199,3 +200,6 @@ export ANSIBLE_NOCOWS=1
 export NODE_TLS_REJECT_UNAUTHORIZED=0;
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+source /usr/share/autojump/autojump.sh
+
