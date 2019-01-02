@@ -2,14 +2,16 @@ session_name: cv
 windows:
 -
   window_name: editor
+  layout: even-horizontal
   start_directory: ~/wonderful-cv
   panes:
   - vim
+  -
 - window_name: server
   start_directory: ~/wonderful-cv
   layout: even-horizontal
   panes:
-  - cd server && npm run build && npm run start
+  - cd server && npm run start
   - cd frontend && npm run start
 - window_name: shell
   panes:

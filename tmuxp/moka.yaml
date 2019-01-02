@@ -3,11 +3,15 @@ start_directory: ~/moka/mage
 windows:
 -
   window_name: editor
+  layout: even-horizontal
   panes:
   - vim
+  -
 - window_name: server
+  layout: even-horizontal
   panes:
   - bash run-dev.sh
+  -
 - window_name: shell
   panes:
   -
