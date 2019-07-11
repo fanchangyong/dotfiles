@@ -426,7 +426,6 @@ call plug#begin('~/.vim/plugged')
 
 " 1. Launguages
 Plug 'moll/vim-node'
-Plug 'andreimaxim/vim-io'
 Plug 'kchmck/vim-coffee-script'
 Plug 'derekwyatt/vim-scala'
 Plug 'fatih/vim-go'
