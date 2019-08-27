@@ -443,10 +443,11 @@ Plug 'wavded/vim-stylus'
 Plug 'mxw/vim-jsx'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
+Plug 'HerringtonDarkholme/yats.vim'
 " Plug 'sukima/xmledit'
 
 " 2. Autocompletion
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
 
 " 3. Navigation
@@ -464,7 +465,7 @@ Plug 'kana/vim-textobj-entire'
 " vim-textobj-user is required by kana/vim-textobj-entire
 Plug 'kana/vim-textobj-user'
 Plug 'fanchangyong/a.vim'
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+" Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " Plug 'justinmk/vim-sneak'
 Plug 'ton/vim-bufsurf'
 Plug 'ntpeters/vim-better-whitespace'
