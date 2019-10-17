@@ -735,5 +735,7 @@ autocmd! VimResized * wincmd =
 " Enable vim-jsx in .js files:
 let g:jsx_ext_required = 1
 
+" Auto Refresh File And NerdTree Directory
 set updatetime=500
 au CursorHold,FocusGained * checktime
+au CursorHold,FocusGained * NERDTreeRefreshRoot
