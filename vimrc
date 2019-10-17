@@ -444,6 +444,7 @@ Plug 'mxw/vim-jsx'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'chemzqm/wxapp.vim'
 " Plug 'sukima/xmledit'
 
 " 2. Autocompletion
@@ -494,6 +495,7 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'christoomey/vim-system-copy'
+Plug 'sjl/vitality.vim'
 
 Plug 'botvs/VimBotVS'
 
@@ -733,3 +735,5 @@ autocmd! VimResized * wincmd =
 " Enable vim-jsx in .js files:
 let g:jsx_ext_required = 1
 
+set updatetime=500
+au CursorHold,FocusGained * checktime
