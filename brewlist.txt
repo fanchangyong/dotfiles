@@ -106,7 +106,6 @@ s-lang
 scala
 scons
 siege
-sl
 socat
 spark
 spidermonkey
