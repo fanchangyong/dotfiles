@@ -417,12 +417,10 @@ Plug 'sheerun/vim-polyglot'
 
 " 2. Autocompletion
 Plug 'mattn/emmet-vim'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Shougo/deoplete.nvim'
+Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'lighttiger2505/deoplete-vim-lsp'
-" After vim-lsp, etc
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'ryanolsonx/vim-lsp-javascript'
 
 " 3. Navigation
@@ -674,10 +672,4 @@ set updatetime=500
 au CursorHold,FocusGained * checktime
 " au CursorHold,FocusGained * NERDTreeRefreshRoot
 
-let g:deoplete#enable_at_startup = 1
-call deoplete#enable_logging('DEBUG', '~/vim-debug.log')
-call deoplete#custom#option({
-      \ 'auto_complete': 1,
-      \ })
 let g:asyncomplete_auto_popup = 1
-let g:deoplete#delimiters = ['/','.']
