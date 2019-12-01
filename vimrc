@@ -134,6 +134,8 @@ endif
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
+set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
+set termencoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -440,7 +442,7 @@ Plug 'hdima/python-syntax'
 Plug 'posva/vim-vue'
 Plug 'uarun/vim-protobuf'
 Plug 'wavded/vim-stylus'
-Plug 'mxw/vim-jsx'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'HerringtonDarkholme/yats.vim'
@@ -498,6 +500,8 @@ Plug 'christoomey/vim-system-copy'
 Plug 'sjl/vitality.vim'
 
 Plug 'botvs/VimBotVS'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 filetype plugin indent on
@@ -659,6 +663,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': 'node_modules'
   \}
 let g:ctrlp_working_path_mode=0
+let g:ctrlp_use_caching=0
 
 " colorscheme
 colorscheme desert
@@ -700,7 +705,12 @@ set noautochdir
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
+let g:ale_fixers = {
+\    'javascript': ['eslint'],
+\    '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
 let g:ale_lint_on_text_changed = 'never'
+nnoremap <leader>f :ALEFix<cr>
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
@@ -732,10 +742,7 @@ set showbreak=↪\
 " Automatically resize Vim window when parent window resized
 autocmd! VimResized * wincmd =
 
-" Enable vim-jsx in .js files:
-let g:jsx_ext_required = 1
-
 " Auto Refresh File And NerdTree Directory
 set updatetime=500
 au CursorHold,FocusGained * checktime
-au CursorHold,FocusGained * NERDTreeRefreshRoot
+" au CursorHold,FocusGained * NERDTreeRefreshRoot
