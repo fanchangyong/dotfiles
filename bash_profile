@@ -205,3 +205,4 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0;
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export LSCOLORS=Exfxcxdxbxegedabagacad
