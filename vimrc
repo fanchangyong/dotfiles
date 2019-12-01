@@ -1,12 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
+" Maintainer:
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
 "
-" Version: 
+" Version:
 "       5.0 - 29/05/12 15:43:36
 "
-" Blog_post: 
+" Blog_post:
 "       http://amix.dk/blog/post/19691#The-ultimate-Vim-configuration-on-Github
 "
 " Awesome_version:
@@ -19,7 +19,7 @@
 " Syntax_highlighted:
 "       http://amix.dk/vim/vimrc.html
 "
-" Raw_version: 
+" Raw_version:
 "       http://amix.dk/vim/vimrc.txt
 "
 " Sections:
@@ -90,23 +90,23 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
 set hlsearch
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -121,7 +121,7 @@ set tm=500
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -224,7 +224,7 @@ noremap <leader>ba :1,1000 bd!<cr>
 " Switch CWD to the directory of the open buffer
 "noremap <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab
   set stal=1
@@ -251,12 +251,12 @@ set laststatus=2
 
 " Format the status line
 "set statusline=FileName:[%{HasPaste()}%F%m%r%h]\ %w\ CWD:[%r%{getcwd()}%h]\ Line:[%l/%L]
-set stl=Path:[%F]\ 
-set stl+=FT:%y\ 
-set stl+=%(\ [%M%R%H%W]%)\ 
-"set stl+=Byte:[%b/0x%B]\ 
-set stl+=Line:[%l/%L]\ 
-set stl+=Col:[%c]\ 
+set stl=Path:[%F]\
+set stl+=FT:%y\
+set stl+=%(\ [%M%R%H%W]%)\
+"set stl+=Byte:[%b/0x%B]\
+set stl+=Line:[%l/%L]\
+set stl+=Col:[%c]\
 set stl+=%{HasPaste()}
 
 
@@ -350,7 +350,7 @@ function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str
     emenu Foo.Bar
     unmenu Foo
-endfunction 
+endfunction
 
 function! VisualSelection(direction) range
     let l:saved_reg = @"
@@ -416,8 +416,14 @@ Plug 'chemzqm/wxapp.vim'
 Plug 'sheerun/vim-polyglot'
 
 " 2. Autocompletion
-" Plug 'Valloric/YouCompleteMe'
 Plug 'mattn/emmet-vim'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Shougo/deoplete.nvim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'lighttiger2505/deoplete-vim-lsp'
+" After vim-lsp, etc
+Plug 'ryanolsonx/vim-lsp-javascript'
 
 " 3. Navigation
 Plug 'scrooloose/nerdtree'
@@ -432,40 +438,20 @@ Plug 'w0rp/ale'
 Plug 'kana/vim-textobj-entire'
 " vim-textobj-user is required by kana/vim-textobj-entire
 Plug 'kana/vim-textobj-user'
-Plug 'fanchangyong/a.vim'
-" Plug 'jeffkreeftmeijer/vim-numbertoggle'
-" Plug 'justinmk/vim-sneak'
 Plug 'ton/vim-bufsurf'
-Plug 'ntpeters/vim-better-whitespace'
-Plug 'godlygeek/tabular'
-Plug 'majutsushi/tagbar'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-easytags'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
-"Plug 'kana/vim-smartinput'
-" Plug 'Lokaltog/vim-easymotion'
-
 Plug 'Shougo/denite.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'raimondi/delimitmate'
 Plug 'christoomey/vim-system-copy'
-
-Plug 'mileszs/ack.vim'
-Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'sjl/vitality.vim'
-
-Plug 'botvs/VimBotVS'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 filetype plugin indent on
@@ -479,10 +465,7 @@ inoremap <c-k> <Up>
 inoremap <c-l> <Right>
 
 noremap <leader>t :NERDTreeToggle<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf = 1
-let g:ycm_server_python_interpreter="/usr/bin/python"
+
 let g:miniBufExplMaxSize = 1
 let NERDTreeShowLineNumbers=1
 let NERDTreeIgnore = ['\.pyc$']
@@ -551,8 +534,6 @@ nnoremap <leader>9 9<c-^>
 nnoremap <leader>c :cclose<cr>
 
 
-"nnoremap <c-]> :YcmCompleter GoToDefinitionElseDeclaration<cr>
-"nnoremap <c-t> <c-o>
 
 let g:InsertModeAlternateHeader=0
 
@@ -572,14 +553,6 @@ let g:go_highlight_build_constraints = 1
 
 set path=.,/usr/include,,,$PWD/**
 
-" settings for Ack.vim
-let g:ackhighlight = 1
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
-nnoremap <leader>a :Ack<Space>
-
 nnoremap H  :BufSurfBack<cr>
 nnoremap L  :BufSurfForward<cr>
 
@@ -592,16 +565,6 @@ nnoremap : ;
 set pastetoggle=<F6>
 
 set tags=./tags;/
-
-" settings for tagbar
-let g:tagbar_width=25
-let g:tagbar_autofocus=1
-let g:tagbar_autoclose=1
-noremap <leader>z :TagbarToggle<cr>
-
-" settings for vim-sessions
-"let g:session_autosave='yes'
-"let g:session_autoload='yes'
 
 " settings for vim-easytags
 let g:easytags_async=1
@@ -701,7 +664,7 @@ nnoremap <leader>d "_dd
 let g:indentLine_char = '┆'
 let g:indentLine_fileType = ['javascript', 'python', 'javascript.jsx', 'stylus', 'pug']
 
-set showbreak=↪\ 
+set showbreak=↪\
 
 " Automatically resize Vim window when parent window resized
 autocmd! VimResized * wincmd =
@@ -710,3 +673,11 @@ autocmd! VimResized * wincmd =
 set updatetime=500
 au CursorHold,FocusGained * checktime
 " au CursorHold,FocusGained * NERDTreeRefreshRoot
+
+let g:deoplete#enable_at_startup = 1
+call deoplete#enable_logging('DEBUG', '~/vim-debug.log')
+call deoplete#custom#option({
+      \ 'auto_complete': 1,
+      \ })
+let g:asyncomplete_auto_popup = 1
+let g:deoplete#delimiters = ['/','.']
