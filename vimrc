@@ -123,7 +123,6 @@ set tm=500
 " Enable syntax highlighting
 syntax enable 
 
-
 " Set extra options when running in GUI mode
 if has("gui_running")
     set guioptions-=T
@@ -284,25 +283,6 @@ if has("mac") || has("macunix")
   vnoremap <D-k> <M-k>
 endif
 
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-
-" Call Erlang compiler on current file
-func! ExecuteErlc()
-	execute "!make" 
-endfunc
-
-augroup buf_write_cmd
-	autocmd!
-	autocmd BufWrite *.py :call DeleteTrailingWS()
-	autocmd BufWrite *.coffee :call DeleteTrailingWS()
-	"autocmd BufWrite *.erl :call ExecuteErlc()
-augroup END
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vimgrep searching and cope displaying
@@ -314,7 +294,7 @@ vnoremap <silent> gv :call VisualSelection('gv')<CR>
 noremap <leader>g :grep // **/*.<left><left><left><left><left><left><left>
 
 " Vimgreps in the current file
-noremap <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
+noremap<leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
 
 " When you press <leader>r you can search and replace the selected text
 vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
@@ -428,26 +408,12 @@ call plug#begin('~/.vim/plugged')
 
 " 1. Launguages
 Plug 'moll/vim-node'
-Plug 'kchmck/vim-coffee-script'
-Plug 'derekwyatt/vim-scala'
-Plug 'fatih/vim-go'
-Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
-Plug 'dgryski/vim-godef'
-Plug 'digitaltoad/vim-jade'
-Plug 'wting/rust.vim'
-Plug 'cespare/vim-toml'
-Plug 'vim-ruby/vim-ruby'
-Plug 'klen/python-mode'
-Plug 'hdima/python-syntax'
-Plug 'posva/vim-vue'
-Plug 'uarun/vim-protobuf'
-Plug 'wavded/vim-stylus'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'pangloss/vim-javascript'
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mdempsky/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
+Plug 'digitaltoad/vim-pug'
+Plug 'python-mode/python-mode'
 Plug 'chemzqm/wxapp.vim'
-" Plug 'sukima/xmledit'
+" language pack
+Plug 'sheerun/vim-polyglot'
 
 " 2. Autocompletion
 " Plug 'Valloric/YouCompleteMe'
@@ -461,7 +427,6 @@ Plug 'felikz/ctrlp-py-matcher'
 " 4. Pretty display
 Plug 'altercation/vim-colors-solarized'
 Plug 'Yggdroot/indentLine'
-
 
 Plug 'w0rp/ale'
 Plug 'kana/vim-textobj-entire'
@@ -482,9 +447,9 @@ Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
 "Plug 'kana/vim-smartinput'
-Plug 'Lokaltog/vim-easymotion'
+" Plug 'Lokaltog/vim-easymotion'
 
-Plug 'shougo/unite.vim'
+Plug 'Shougo/denite.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rhubarb'
@@ -492,11 +457,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'raimondi/delimitmate'
+Plug 'christoomey/vim-system-copy'
 
-Plug 'chase/vim-ansible-yaml'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'christoomey/vim-system-copy'
 Plug 'sjl/vitality.vim'
 
 Plug 'botvs/VimBotVS'
@@ -687,7 +651,7 @@ let g:UltiSnipsEditSplit="vertical"
 set cursorline
 " set cursorcolumn
 
-set clipboard=unnamed
+" set clipboard=unnamed
 
 nnoremap <leader>l :ls<CR>:b<Space>
 
