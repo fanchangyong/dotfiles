@@ -672,4 +672,8 @@ set updatetime=500
 au CursorHold,FocusGained * checktime
 " au CursorHold,FocusGained * NERDTreeRefreshRoot
 
+" asyncomplete
 let g:asyncomplete_auto_popup = 1
+
+" vim-lsp
+let g:lsp_diagnostics_enabled = 0
