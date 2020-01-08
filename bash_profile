@@ -77,6 +77,8 @@ alias .....="cd ../../../../"
 alias -- -="cd -"
 alias cd..="cd ../"
 
+alias cdtmp='cd `mktemp -d /tmp/fancy-XXXXXX`'
+
 alias dot="cd $DOTFILE_DIR"
 
 alias dev="ssh fanchangyong@10.4.17.164"
