@@ -116,7 +116,10 @@ export PS1
 export DOTFILE_DIR
 # 在history中忽略重复的命令
 export HISTCONTROL=ignoredups
+export HISTSIZE=100000
+export HISTTIMEFORMAT='%F %T  '
 export EDITOR=vim
+shopt -s histappend
 
 #export GOROOT=/usr/local/go
 
