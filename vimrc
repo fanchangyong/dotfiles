@@ -448,7 +448,6 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'raimondi/delimitmate'
-Plug 'christoomey/vim-system-copy'
 Plug 'sjl/vitality.vim'
 
 call plug#end()
