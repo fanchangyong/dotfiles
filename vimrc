@@ -441,7 +441,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-es2015-snippets'
 Plug 'epilande/vim-react-snippets'
-Plug 'Shougo/denite.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rhubarb'
@@ -619,7 +618,6 @@ nnoremap <leader>l :ls<CR>:b<Space>
 let g:pymode_lint = 0
 let g:pymode_lint_cwindow = 0
 let g:pymode_rope_lookup_project = 0
-set completeopt=menu
 
 " settings for fzf
 "nnoremap <silent><C-M> :FZF -m<CR>
