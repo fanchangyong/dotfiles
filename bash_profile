@@ -102,9 +102,9 @@ export PROMPT_DIRTRIM=3
 
 if [[ $(id -u) == "0" ]]
 then
-	PS1="$On_Red\u$IGreen@$Cyan\H $Purple($os) $Yellow\w $Purple#"
+	PS1="$On_Red\u$IGreen@$Cyan\h $Yellow\w $Purple#"
 else
-	PS1="$Green\u$IGreen@$Cyan\H $Purple($redist) $Yellow\w $Purple>"
+	PS1="$Green\u$IGreen@$Cyan\h $Yellow\w $Purple>"
 fi
 PS1+=$Color_Off #end setting color
 
