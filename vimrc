@@ -431,6 +431,7 @@ Plug 'felikz/ctrlp-py-matcher'
 " 4. Pretty display
 Plug 'altercation/vim-colors-solarized'
 Plug 'Yggdroot/indentLine'
+Plug 'chrisbra/Colorizer'
 
 Plug 'w0rp/ale'
 Plug 'kana/vim-textobj-entire'
@@ -674,3 +675,6 @@ let g:asyncomplete_auto_popup = 1
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0
+
+" chrisbra/Colorizer
+let g:colorizer_auto_filetype='css,html,stylus'
