@@ -628,6 +628,13 @@ set noautochdir
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
+
+" 这里暂时关闭lsp的支持，是因为我暂时不写ts
+" 而在查看很多ts代码的时候，ALE会自动运行tsserver做语法检查
+" 这就导致一打开某个第三方的项目满屏的错误提示。
+" 如果之后自己写ts代码可以打开这个选项。
+let g:ale_disable_lsp = 1
+
 let g:ale_fixers = {
 \    'javascript': ['eslint'],
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
