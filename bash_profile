@@ -81,8 +81,6 @@ alias cdtmp='cd `mktemp -d /tmp/fancy-XXXXXX`'
 
 alias dot="cd $DOTFILE_DIR"
 
-alias dev="ssh fanchangyong@10.4.17.164"
-
 if [[ $os = "Linux" ]]
 then
 	if command -v lsb_release > /dev/null 2>&1
