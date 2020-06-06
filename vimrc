@@ -421,6 +421,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
 Plug 'ryanolsonx/vim-lsp-javascript'
 
 " 3. Navigation
@@ -584,7 +585,8 @@ let javascript_enable_domhtmlcss=1
 "let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_max_files=0
 let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules'
+  \ 'dir': 'node_modules',
+  \ 'file': '\v\.class$',
   \}
 let g:ctrlp_working_path_mode=0
 let g:ctrlp_use_caching=0
@@ -682,6 +684,7 @@ let g:asyncomplete_auto_popup = 1
 
 " vim-lsp
 let g:lsp_diagnostics_enabled = 0
+let g:lsp_signature_help_enabled = 0
 
 " chrisbra/Colorizer
 let g:colorizer_auto_filetype='css,html,stylus'
