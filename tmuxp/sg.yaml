@@ -1,17 +1,18 @@
-session_name: moka
-start_directory: ~/moka/mage
+session_name: sg
 windows:
 -
   window_name: editor
   layout: even-horizontal
+  start_directory: ~/coding/sg-admin
   panes:
   - vim
   -
 - window_name: server
+  start_directory: ~/coding/sg-admin/
   layout: even-horizontal
   panes:
-  - bash run-dev.sh
-  -
+  - cd server && npm run start
+  - npm run start
 - window_name: shell
   panes:
   -
@@ -24,12 +25,12 @@ windows:
 - window_name: shell
   panes:
   -
-- window_name: shell
+- window_name: remote
   panes:
   -
 - window_name: db
   panes:
-  - mysql -uroot --password= moka_dev
+  -
 - window_name: shell
   panes:
   -
