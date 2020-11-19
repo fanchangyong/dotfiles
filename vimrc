@@ -417,12 +417,7 @@ Plug 'sheerun/vim-polyglot'
 
 " 2. Autocompletion
 Plug 'mattn/emmet-vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-lsp-settings'
-Plug 'ryanolsonx/vim-lsp-javascript'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 3. Navigation
 Plug 'scrooloose/nerdtree'
@@ -638,7 +633,7 @@ let g:ale_linters = {
 let g:ale_disable_lsp = 1
 
 let g:ale_fixers = {
-\    'javascript': ['eslint'],
+\    'javascript': ['prettier'],
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_lint_on_text_changed = 'never'
