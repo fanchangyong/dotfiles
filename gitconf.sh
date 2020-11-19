@@ -11,7 +11,7 @@ git config --global alias.ps push
 git config --global alias.sm submodule
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-git config --global core.editor `which vim`
+git config --global core.editor `which vi`
 git config --global color.ui true
 git config --global user.name "fanchangyong"
 git config --global user.email "fanchangyong@gmail.com"
