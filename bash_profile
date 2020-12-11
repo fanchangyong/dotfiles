@@ -68,6 +68,7 @@ alias cf=coffee
 alias dtrace='sudo dtrace'
 alias dtruss='sudo dtruss'
 alias ipy='ipython'
+alias dc=docker-compose
 
 #alias top="top ${top_arg}"
 alias ..="cd ../"
