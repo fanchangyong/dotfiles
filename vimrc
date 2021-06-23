@@ -407,10 +407,6 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " 1. Launguages
-Plug 'moll/vim-node'
-Plug 'mdempsky/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh'}
-Plug 'digitaltoad/vim-pug'
-Plug 'python-mode/python-mode'
 Plug 'chemzqm/wxapp.vim'
 " language pack
 Plug 'sheerun/vim-polyglot'
