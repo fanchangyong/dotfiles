@@ -417,8 +417,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 3. Navigation
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
-Plug 'felikz/ctrlp-py-matcher'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'dyng/ctrlsf.vim'
 
 " 4. Pretty display
 Plug 'altercation/vim-colors-solarized'
@@ -459,6 +460,7 @@ let g:miniBufExplMaxSize = 1
 let NERDTreeShowLineNumbers=1
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeQuitOnOpen = 1
+let NERDTreeWinSize = 60
 
 "cnoremap <C-p> <Up>
 "cnoremap <C-n> <Down>
@@ -572,16 +574,6 @@ let g:indent_guides_enable_on_vim_startup = 0
 "settings for javascript
 let javascript_enable_domhtmlcss=1
 
-" settings for ctrlp
-"let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_max_files=0
-let g:ctrlp_custom_ignore = {
-  \ 'dir': 'node_modules',
-  \ 'file': '\v\.class$',
-  \}
-let g:ctrlp_working_path_mode=0
-let g:ctrlp_use_caching=0
-
 " colorscheme
 colorscheme desert
 set background=dark
@@ -615,6 +607,8 @@ let g:pymode_rope_lookup_project = 0
 
 " settings for fzf
 "nnoremap <silent><C-M> :FZF -m<CR>
+nnoremap <c-p> :FZF<cr>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 set noautochdir
 
 " settings for ALE
@@ -633,7 +627,7 @@ let g:ale_fixers = {
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_lint_on_text_changed = 'never'
-nnoremap <leader>f :ALEFix<cr>
+" nnoremap <leader>f :ALEFix<cr>
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
@@ -652,9 +646,6 @@ let g:godef_same_file_in_same_window=1
 let g:godef_split=0
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
-
-" delete without yank to register
-nnoremap <leader>d "_dd
 
 " settings for indentLine
 let g:indentLine_char = '┆'
@@ -679,3 +670,27 @@ let g:lsp_signature_help_enabled = 0
 
 " chrisbra/Colorizer
 let g:colorizer_auto_filetype='css,html,stylus'
+
+" options for ctrlsf
+nmap <leader>f <Plug>CtrlSFPrompt
+nmap <leader>s <Plug>CtrlSFCwordPath<CR>
+vnoremap <leader>s <Plug>CtrlSFVwordExec
+nnoremap <leader>a :CtrlSFToggle<CR>
+
+let g:ctrlsf_auto_preview = 1
+let g:ctrlsf_selected_line_hl = 0
+
+let g:ctrlsf_auto_close = {
+    \ "normal" : 0,
+    \ "compact": 0
+    \}
+
+let g:ctrlsf_auto_focus = {
+    \ "at": "done",
+    \ "duration_less_than": 1000
+    \ }
+
+let g:ctrlsf_mapping = {
+    \ "next": "n",
+    \ "prev": "N",
+    \ }
