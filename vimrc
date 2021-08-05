@@ -420,6 +420,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 Plug 'dyng/ctrlsf.vim'
+Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+
 
 " 4. Pretty display
 Plug 'altercation/vim-colors-solarized'
