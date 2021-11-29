@@ -40,8 +40,8 @@ alias egrep="egrep --color=auto -n"
 alias erlm="erl -man"
 alias mk=make
 alias m=make
-# alias vi=nvim
-# alias vim=nvim
+alias vi=nvim
+alias vim=nvim
 alias l=ls
 alias ll="ls -l ${ls_color}"
 #alias .="source ~/.bash_profile"
@@ -99,11 +99,15 @@ fi
 
 export PROMPT_DIRTRIM=3
 
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+}
+
 if [[ $(id -u) == "0" ]]
 then
-	PS1="$On_Red\u$IGreen@$Cyan\h $Yellow\w $Purple#"
+	PS1="$On_Red\u$IGreen@$Cyan\h $Yellow\w $Green\$(parse_git_branch)$Purple#"
 else
-	PS1="$Green\u$IGreen@$Cyan\h $Yellow\w $Purple>"
+	PS1="$Green\u$IGreen@$Cyan\h $Yellow\w $Green\$(parse_git_branch)$Purple>"
 fi
 PS1+=$Color_Off #end setting color
 
@@ -130,18 +134,6 @@ fi
 # mini wiki
 # inspied by http://www.commandlinefu.com/commands/view/5188/query-wikipedia-via-console-over-dns
 mwiki() { dig +short txt "$*".wp.dg.cx; }
-
-# qingyun cloud
-qingyun_ip="121.201.8.37"
-alias qingyun_root="ssh root@$qingyun_ip"
-alias qingyun="ssh ubuntu@$qingyun_ip"
-
-linode_ip="23.239.9.105"
-alias linode="ssh root@$linode_ip"
-
-aws_ip="54.65.178.152"
-alias aws="ssh ubuntu@$aws_ip"
-alias socks="ssh -ND 5555 ubuntu@$aws_ip"
 
 # automatically `ls` after `cd`
 cd() { builtin cd "$@" && ls; }
@@ -210,3 +202,8 @@ export NODE_TLS_REJECT_UNAUTHORIZED=0;
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export LSCOLORS=Exfxcxdxbxegedabagacad
+
+## FZF
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
+. "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -1,14 +1,14 @@
-session_name: cv
+session_name: care
 windows:
 -
   window_name: editor
   layout: even-horizontal
-  start_directory: ~/coding/wonderful-cv
+  start_directory: ~/coding/care
   panes:
   - vim
   -
 - window_name: server
-  start_directory: ~/coding/wonderful-cv
+  start_directory: ~/coding/care
   layout: even-horizontal
   panes:
   - cd server && npm run start

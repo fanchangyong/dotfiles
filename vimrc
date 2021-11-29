@@ -428,6 +428,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'Yggdroot/indentLine'
 Plug 'chrisbra/Colorizer'
 
+
 Plug 'w0rp/ale'
 Plug 'kana/vim-textobj-entire'
 " vim-textobj-user is required by kana/vim-textobj-entire
@@ -626,10 +627,11 @@ let g:ale_disable_lsp = 1
 
 let g:ale_fixers = {
 \    'javascript': ['prettier'],
+\    'typescript': ['prettier', 'tslint'],
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_lint_on_text_changed = 'never'
-" nnoremap <leader>f :ALEFix<cr>
+nnoremap <leader>f :ALEFix<cr>
 
 " settings for delimitmate
 let g:delimitMate_expand_cr=1
@@ -674,7 +676,7 @@ let g:lsp_signature_help_enabled = 0
 let g:colorizer_auto_filetype='css,html,stylus'
 
 " options for ctrlsf
-nmap <leader>f <Plug>CtrlSFPrompt
+" nmap <leader>f <Plug>CtrlSFPrompt
 nmap <leader>s <Plug>CtrlSFCwordPath<CR>
 vnoremap <leader>s <Plug>CtrlSFVwordExec
 nnoremap <leader>a :CtrlSFToggle<CR>
@@ -696,3 +698,7 @@ let g:ctrlsf_mapping = {
     \ "next": "n",
     \ "prev": "N",
     \ }
+
+" for coc.nvim
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
