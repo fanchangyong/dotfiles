@@ -34,7 +34,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 	    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install tools
-. install_tools.sh
+# . install_tools.sh
 
 # git conf
 . gitconf.sh
