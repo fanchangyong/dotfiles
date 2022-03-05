@@ -100,26 +100,6 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_command"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "left_option"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "left_option"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "left_command"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "f5"
                             },
                             "to": [
@@ -154,7 +134,7 @@
                             },
                             "to": [
                                 {
-                                    "key_code": "apple_display_brightness_decrement"
+                                    "key_code": "apple_display_brightness_increment"
                                 }
                             ]
                         },
@@ -164,7 +144,27 @@
                             },
                             "to": [
                                 {
-                                    "key_code": "apple_display_brightness_increment"
+                                    "key_code": "apple_display_brightness_decrement"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_command"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_option"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_option"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_command"
                                 }
                             ]
                         }
