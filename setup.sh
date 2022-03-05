@@ -25,6 +25,7 @@ ln -f -s "$PWD/grcat" ~/.grcat
 ln -f -s "$PWD/toprc" ~/.toprc
 ln -f -s "$PWD/tmuxp" ~/.tmuxp
 ln -f -s "$PWD/ssh_config" ~/.ssh/config
+ln -f -s "$PWD/karabiner.json" ~/.config/karabiner/karabiner.json
 
 # for sshrc
 
