@@ -615,6 +615,10 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 set noautochdir
 
 " settings for ALE
+
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
