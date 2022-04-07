@@ -428,7 +428,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'Yggdroot/indentLine'
 Plug 'chrisbra/Colorizer'
 
-
 Plug 'w0rp/ale'
 Plug 'kana/vim-textobj-entire'
 " vim-textobj-user is required by kana/vim-textobj-entire
@@ -631,7 +630,9 @@ let g:ale_disable_lsp = 1
 
 let g:ale_fixers = {
 \    'javascript': ['prettier'],
+\    'javascriptreact': ['prettier'],
 \    'typescript': ['prettier', 'tslint'],
+\    'typescriptreact': ['prettier', 'tslint'],
 \    '*': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 let g:ale_lint_on_text_changed = 'never'

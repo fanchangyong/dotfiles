@@ -1,14 +1,14 @@
-session_name: sg
+session_name: cp
 windows:
 -
   window_name: editor
   layout: even-horizontal
-  start_directory: ~/coding
+  start_directory: ~/
   panes:
   -
   -
 - window_name: server
-  start_directory: ~/coding
+  start_directory: ~/
   layout: even-horizontal
   panes:
   -
@@ -30,7 +30,7 @@ windows:
   -
 - window_name: db
   panes:
-  -
+  - mysql -uroot --password= cv
 - window_name: shell
   panes:
   -

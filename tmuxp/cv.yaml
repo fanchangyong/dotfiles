@@ -3,16 +3,16 @@ windows:
 -
   window_name: editor
   layout: even-horizontal
-  start_directory: ~/coding/wonderful-cv
+  start_directory: ~/coding
   panes:
-  - vim
+  -
   -
 - window_name: server
-  start_directory: ~/coding/wonderful-cv
+  start_directory: ~/coding
   layout: even-horizontal
   panes:
-  - cd server && npm run start
-  - cd frontend && npm run start
+  -
+  -
 - window_name: shell
   panes:
   -
