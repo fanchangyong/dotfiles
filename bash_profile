@@ -126,10 +126,6 @@ shopt -s histappend
 
 #export GOROOT=/usr/local/go
 
-if [ -e "~/.git-completion.bash" ]; then
-	echo "sourcing git completion"
-	source "~/.git-completion.bash"
-fi
 
 # mini wiki
 # inspied by http://www.commandlinefu.com/commands/view/5188/query-wikipedia-via-console-over-dns
@@ -205,5 +201,13 @@ export LSCOLORS=Exfxcxdxbxegedabagacad
 
 ## FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-. "$HOME/.cargo/env"
-. "$HOME/.sdkman/bin/sdkman-init.sh"
+[ -f ~/.cargo/env ] && source ~/.cargo/env
+[ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+__git_complete g __git_main
