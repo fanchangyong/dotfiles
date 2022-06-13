@@ -610,7 +610,7 @@ let g:pymode_rope_lookup_project = 0
 " settings for fzf
 "nnoremap <silent><C-M> :FZF -m<CR>
 nnoremap <c-p> :FZF<cr>
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden '
 set noautochdir
 
 " settings for ALE
