@@ -1,2 +1,14 @@
 ServerAliveInterval 30
 ServerAliveCountMax 60
+
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  User git
+
+Host gitlab.com
+  Hostname altssh.gitlab.com
+  User git
+  Port 443
+  PreferredAuthentications publickey
+
