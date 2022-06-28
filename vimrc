@@ -414,6 +414,7 @@ Plug 'sheerun/vim-polyglot'
 " 2. Autocompletion
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'github/copilot.vim'
 
 " 3. Navigation
 Plug 'scrooloose/nerdtree'
