@@ -124,7 +124,7 @@ export HISTTIMEFORMAT='%F %T  '
 export EDITOR=vim
 shopt -s histappend
 
-#export GOROOT=/usr/local/go
+export GOROOT=/usr/lib/go
 
 
 # mini wiki
