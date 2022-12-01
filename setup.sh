@@ -25,7 +25,15 @@ ln -f -s "$PWD/grcat" ~/.grcat
 ln -f -s "$PWD/toprc" ~/.toprc
 ln -f -s "$PWD/tmuxp" ~/.tmuxp
 ln -f -s "$PWD/ssh_config" ~/.ssh/config
-ln -f -s "$PWD/karabiner.json" ~/.config/karabiner/karabiner.json
+
+mkdir -p ~/.config/nvim
+ln -f -s "$PWD/init.vim" ~/.config/nvim/init.vim
+
+if [[$os = "Darwin"]]
+then
+	mkdir -p ~/.config/karabiner
+	ln -f -s "$PWD/karabiner.json" ~/.config/karabiner/karabiner.json
+fi
 
 # for sshrc
 
