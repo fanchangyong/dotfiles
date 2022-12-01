@@ -25,6 +25,7 @@ ln -f -s "$PWD/grcat" ~/.grcat
 ln -f -s "$PWD/toprc" ~/.toprc
 ln -f -s "$PWD/tmuxp" ~/.tmuxp
 ln -f -s "$PWD/ssh_config" ~/.ssh/config
+ln -f -s "$PWD/git-completion.bash" ~/.git-completion.bash
 
 mkdir -p ~/.config/nvim
 ln -f -s "$PWD/init.vim" ~/.config/nvim/init.vim
