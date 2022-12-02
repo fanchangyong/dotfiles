@@ -34,52 +34,31 @@ if `has hub`; then
 	alias git=hub
 fi
 
+alias l=ls
 alias ls="ls ${ls_color}"
-alias grep="grep --color=auto -n"
-alias egrep="egrep --color=auto -n"
+alias ll="ls -l ${ls_color}"
 alias erlm="erl -man"
-alias mk=make
-alias m=make
 alias vi=nvim
 alias vim=nvim
-alias l=ls
-alias ll="ls -l ${ls_color}"
-#alias .="source ~/.bash_profile"
-#alias .g="source $DOTFILE_DIR/gitconf.sh"
-alias so=source
 alias tma="tmux attach"
 alias tm=tmux
 alias tml="tmuxp load -y"
 alias eb="vim ~/.bash_profile" # Edit bash profile
 alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
-alias diff=colordiff
 alias df="df -h"
 alias g=git
 alias ng=nginx
-alias v=vagrant
-alias c='clear'
-alias quit='exit'
-alias q='exit'
-alias e='exit'
-alias 'ccs'='clang -S -mllvm --x86-asm-syntax=intel '
+alias c=clear
+alias q=exit
+alias e=exit
 alias tcpdump='sudo tcpdump'
-alias tree='tree -C'
-alias cf=coffee
-alias dtrace='sudo dtrace'
-alias dtruss='sudo dtruss'
 alias ipy='ipython'
-alias dc=docker-compose
-
-#alias top="top ${top_arg}"
+alias pm='sudo pacman'
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
-alias -- -="cd -"
-alias cd..="cd ../"
-
 alias cdtmp='cd `mktemp -d /tmp/fancy-XXXXXX`'
-
 alias dot="cd $DOTFILE_DIR"
 
 if [[ $os = "Linux" ]]
@@ -114,6 +93,7 @@ PS1+=$Color_Off #end setting color
 export GOPATH=~/go
 export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"
 export PATH+=":$GOPATH/bin"
+export PATH+=":$HOME/bin"
 
 export PS1
 export DOTFILE_DIR

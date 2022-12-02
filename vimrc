@@ -413,7 +413,7 @@ Plug 'sheerun/vim-polyglot'
 
 " 2. Autocompletion
 Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 " Plug 'github/copilot.vim'
 
 " 3. Navigation
