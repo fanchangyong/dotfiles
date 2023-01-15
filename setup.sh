@@ -30,7 +30,7 @@ ln -f -s "$PWD/git-completion.bash" ~/.git-completion.bash
 mkdir -p ~/.config/nvim
 ln -f -s "$PWD/init.vim" ~/.config/nvim/init.vim
 
-if [[$os = "Darwin"]]
+if [[ $os = "Darwin" ]]
 then
 	mkdir -p ~/.config/karabiner
 	ln -f -s "$PWD/karabiner.json" ~/.config/karabiner/karabiner.json
