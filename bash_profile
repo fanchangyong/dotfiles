@@ -37,6 +37,7 @@ fi
 alias l=ls
 alias ls="ls ${ls_color}"
 alias ll="ls -l ${ls_color}"
+alias s="ssh"
 alias erlm="erl -man"
 alias vi=nvim
 alias vim=nvim
@@ -191,3 +192,5 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 __git_complete g __git_main
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
