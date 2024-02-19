@@ -55,6 +55,7 @@ alias e=exit
 alias tcpdump='sudo tcpdump'
 alias ipy='ipython'
 alias pm='sudo pacman'
+alias pn='pnpm'
 alias ..="cd ../"
 alias ...="cd ../../"
 alias ....="cd ../../../"
@@ -194,3 +195,6 @@ fi
 __git_complete g __git_main
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# auto complete for `aws`
+complete -C '/usr/local/bin/aws_completer' aws
