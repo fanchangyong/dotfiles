@@ -411,18 +411,11 @@ Plug 'chemzqm/wxapp.vim'
 " language pack
 Plug 'sheerun/vim-polyglot'
 
-" 2. Autocompletion
-Plug 'mattn/emmet-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-" Plug 'github/copilot.vim'
-
 " 3. Navigation
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf'
 Plug 'dyng/ctrlsf.vim'
-Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
-
 
 " 4. Pretty display
 Plug 'altercation/vim-colors-solarized'
@@ -434,10 +427,6 @@ Plug 'kana/vim-textobj-entire'
 " vim-textobj-user is required by kana/vim-textobj-entire
 Plug 'kana/vim-textobj-user'
 Plug 'ton/vim-bufsurf'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'epilande/vim-es2015-snippets'
-Plug 'epilande/vim-react-snippets'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-rhubarb'
@@ -587,15 +576,6 @@ let g:sneak#s_next = 1
 "settings for vim-better-space
 let g:better_whitespace_filetypes_blacklist=['help','unite']
 
-"ultisnips
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-l"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
 set cursorline
 " set cursorcolumn
 
@@ -671,13 +651,6 @@ set updatetime=500
 au CursorHold,FocusGained * checktime
 " au CursorHold,FocusGained * NERDTreeRefreshRoot
 
-" asyncomplete
-let g:asyncomplete_auto_popup = 1
-
-" vim-lsp
-let g:lsp_diagnostics_enabled = 0
-let g:lsp_signature_help_enabled = 0
-
 " chrisbra/Colorizer
 let g:colorizer_auto_filetype='css,html,stylus'
 
@@ -704,10 +677,6 @@ let g:ctrlsf_mapping = {
     \ "next": "n",
     \ "prev": "N",
     \ }
-
-" for coc.nvim
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 
 " disable mouse
 set mouse=
