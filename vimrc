@@ -134,7 +134,9 @@ endif
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 set fileencodings=utf-8,gbk,utf-16le,cp1252,iso-8859-15,ucs-bom
-set termencoding=utf-8
+if !has('nvim')
+  set termencoding=utf-8
+endif
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -545,7 +547,9 @@ set modelines=5
 nnoremap ; :
 nnoremap : ;
 
-set pastetoggle=<F6>
+if !has('nvim')
+  set pastetoggle=<F6>
+endif
 
 set tags=./tags;/
 
