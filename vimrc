@@ -165,6 +165,7 @@ set shiftwidth=2
 set tabstop=2
 
 set lbr
+set tw=0
 
 set ai "Auto indent
 set si "Smart indent
