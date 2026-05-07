@@ -1,6 +1,6 @@
 # vim: set ft=sh:
 
-export PROMPT_DIRTRIM=2
+export PROMPT_DIRTRIM=3
 
 SCRIPT=${BASH_SOURCE[0]}
 if [[ -h $SCRIPT ]]
@@ -30,30 +30,22 @@ fi
 	#alias ssh=sshrc
 #fi
 
-if `has hub`; then
-	alias git=hub
-fi
-
 alias l=ls
 alias ls="ls ${ls_color}"
 alias ll="ls -l ${ls_color}"
 alias s="ssh"
-alias erlm="erl -man"
 alias vi=nvim
 alias vim=nvim
 alias tma="tmux attach"
 alias tm=tmux
-alias tml="tmuxp load -y"
 alias eb="vim ~/.bash_profile" # Edit bash profile
 alias eg="vim $DOTFILE_DIR/gitconf.sh" # Edit git config file
 alias df="df -h"
 alias g=git
-alias ng=nginx
 alias c=clear
 alias q=exit
 alias e=exit
 alias tcpdump='sudo tcpdump'
-alias ipy='ipython'
 alias pm='sudo pacman'
 alias pn='pnpm'
 alias ..="cd ../"
@@ -78,8 +70,6 @@ then
 	redist=$os
 fi
 
-export PROMPT_DIRTRIM=3
-
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
@@ -93,7 +83,6 @@ fi
 PS1+=$Color_Off #end setting color
 
 export GOPATH=~/go
-export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin"
 export PATH+=":$GOPATH/bin"
 export PATH+=":$HOME/bin"
 
@@ -108,10 +97,6 @@ shopt -s histappend
 
 export GOROOT=/usr/lib/go
 
-
-# mini wiki
-# inspied by http://www.commandlinefu.com/commands/view/5188/query-wikipedia-via-console-over-dns
-mwiki() { dig +short txt "$*".wp.dg.cx; }
 
 # automatically `ls` after `cd`
 cd() { builtin cd "$@" && ls; }
@@ -128,20 +113,9 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 set -o vi
 set -o ignoreeof
 
-#load nvm
-export NVM_DIR=~/.nvm
-
-function loadnvm()
-{
-	if [ -e $NVM_DIR/nvm.sh ]; then
-		source $NVM_DIR/nvm.sh
-	elif `has brew` && [ -e $(brew --prefix nvm)/nvm.sh ]; then 
-		source $(brew --prefix nvm)/nvm.sh
-	fi
-}
-
-# 加了这个，会导致新开一个窗口的时候很慢
-# loadnvm
+# load nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # locales
 export LC_TIME=en_US.UTF-8
@@ -171,23 +145,9 @@ function swap()
 
 # Disable ansible cowsay: https://michaelheap.com/cowsay-and-ansible/
 export ANSIBLE_NOCOWS=1
-export NODE_TLS_REJECT_UNAUTHORIZED=0;
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-[ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 export LSCOLORS=Exfxcxdxbxegedabagacad
-
-## FZF
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/.cargo/env ] && source ~/.cargo/env
-[ -f ~/.sdkman/bin/sdkman-init.sh ] && source ~/.sdkman/bin/sdkman-init.sh
-
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
@@ -196,5 +156,8 @@ __git_complete g __git_main
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# auto complete for `aws`
-complete -C '/usr/local/bin/aws_completer' aws
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by Windsurf
+export PATH="/Users/changyong/.codeium/windsurf/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
