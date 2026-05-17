@@ -3,6 +3,7 @@ PWD=`pwd`
 os=`uname -s`
 
 ln -f -s "$PWD/bash_profile" ~/.bash_profile
+ln -f -s "$PWD/bashrc" ~/.bashrc
 if [[ $os = "Darwin" ]]
 then
 	ln -f -s "$PWD/bash_profile_local_osx.conf" ~/.bash_profile_local.conf
