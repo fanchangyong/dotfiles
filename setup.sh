@@ -30,6 +30,9 @@ ln -f -s "$PWD/git-completion.bash" ~/.git-completion.bash
 mkdir -p ~/.config/nvim
 ln -f -s "$PWD/init.vim" ~/.config/nvim/init.vim
 
+mkdir -p ~/.config/herdr
+ln -f -s "$PWD/herdr/config.toml" ~/.config/herdr/config.toml
+
 if [[ $os = "Darwin" ]]
 then
 	mkdir -p ~/.config/karabiner

@@ -1,0 +1,7 @@
+onboarding = false
+
+[theme]
+name = "tokyo-night-day"
+
+[keys]
+prefix = "ctrl+a"
