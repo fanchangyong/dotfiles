@@ -5,3 +5,10 @@ name = "tokyo-night-day"
 
 [keys]
 prefix = "ctrl+a"
+focus_pane_left = "alt+h"
+focus_pane_right = "alt+l"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+previous_tab = "alt+["
+next_tab = "alt+]"
+split_horizontal = "h"
