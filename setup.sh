@@ -40,6 +40,17 @@ then
 	ln -f -s "$PWD/karabiner.json" ~/.config/karabiner/karabiner.json
 fi
 
+# Obsidian vimrc — one shared file across every vault under ~/Documents/Obsidian/.
+# Each vault's .obsidian.vimrc is symlinked to ~/dotfiles/obsidian.vimrc.
+# Re-run safely after creating a new vault; community plugins still need to be
+# installed and toggled on inside each vault for the remaps to take effect.
+if [ -d "$HOME/Documents/Obsidian" ]; then
+	for vault in "$HOME"/Documents/Obsidian/*/; do
+		[ -d "${vault}.obsidian" ] || continue
+		ln -f -s "$PWD/obsidian.vimrc" "${vault}.obsidian.vimrc"
+	done
+fi
+
 # for sshrc
 
 
