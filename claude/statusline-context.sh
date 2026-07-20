@@ -28,6 +28,11 @@ eval "$(printf '%s' "$input" | jq -r '
     @sh "lim7_reset=\(.rate_limits.seven_day.resets_at // "")"
 ')"
 
+# Branch name, or short SHA when detached; empty outside a repo. Resolved from
+# the real path, so this must run before $dir is abbreviated to ~.
+branch=$(git -C "$dir" --no-optional-locks symbolic-ref --quiet --short HEAD 2>/dev/null \
+    || git -C "$dir" --no-optional-locks rev-parse --short HEAD 2>/dev/null)
+
 # Abbreviate $HOME to ~ the way a shell prompt would
 dir=${dir/#$HOME/\~}
 
@@ -52,6 +57,7 @@ until_reset() {
 
 sep="${Grey} · "
 out="${Yellow}${dir}"
+[ -n "$branch" ] && out+=" ${Green}(${branch})"
 [ -n "$model" ] && out+="${sep}${Purple}${model}"
 [ -n "$ctx_pct" ] && out+="${sep}${Cyan}${ctx_pct}% ctx ${Grey}($(human "$ctx_used")/$(human "$ctx_size"))"
 if [ -n "$lim5" ] && [ -n "$lim7" ]; then
