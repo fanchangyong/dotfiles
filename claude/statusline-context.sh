@@ -45,6 +45,11 @@ human() {
     }'
 }
 
+# Percentages arrive as raw floats (28.999999999999996); one decimal is plenty
+pct() {
+    awk -v n="$1" 'BEGIN { printf "%.1f", n }'
+}
+
 # Time until a window rolls over, as a compact "2.4d" / "4.1h" / "35m"
 until_reset() {
     local secs=$(( $1 - $(date +%s) ))
@@ -59,11 +64,11 @@ sep="${Grey} · "
 out="${Yellow}${dir}"
 [ -n "$branch" ] && out+=" ${Green}(${branch})"
 [ -n "$model" ] && out+="${sep}${Purple}${model}"
-[ -n "$ctx_pct" ] && out+="${sep}${Cyan}${ctx_pct}% ctx ${Grey}($(human "$ctx_used")/$(human "$ctx_size"))"
+[ -n "$ctx_pct" ] && out+="${sep}${Cyan}$(pct "$ctx_pct")% ctx ${Grey}($(human "$ctx_used")/$(human "$ctx_size"))"
 if [ -n "$lim5" ] && [ -n "$lim7" ]; then
     left5=$([ -n "$lim5_reset" ] && until_reset "$lim5_reset")
     left7=$([ -n "$lim7_reset" ] && until_reset "$lim7_reset")
-    out+="${sep}${Grey}${lim5}%${left5:+ ($left5)} / ${lim7}%${left7:+ ($left7)} limits"
+    out+="${sep}${Grey}$(pct "$lim5")%${left5:+ ($left5)} / $(pct "$lim7")%${left7:+ ($left7)} limits"
 fi
 
 printf "%b" "${out}${Color_Off}"
