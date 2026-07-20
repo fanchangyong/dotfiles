@@ -34,6 +34,12 @@ ln -f -s "$PWD/init.vim" ~/.config/nvim/init.vim
 mkdir -p ~/.config/herdr
 ln -f -s "$PWD/herdr/config.toml" ~/.config/herdr/config.toml
 
+# Claude Code — shared settings and status line. Machine-specific overrides stay
+# in ~/.claude/settings.local.json, which is deliberately not tracked here.
+mkdir -p ~/.claude
+ln -f -s "$PWD/claude/settings.json" ~/.claude/settings.json
+ln -f -s "$PWD/claude/statusline-context.sh" ~/.claude/statusline-context.sh
+
 if [[ $os = "Darwin" ]]
 then
 	mkdir -p ~/.config/karabiner
