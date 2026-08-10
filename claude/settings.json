@@ -3,10 +3,7 @@
     "defaultMode": "bypassPermissions"
   },
   "model": "opus",
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.claude/statusline-context.sh"
-  },
+  "autoCompactWindow": 200000,
   "hooks": {
     "Stop": [
       {
@@ -30,6 +27,10 @@
         ]
       }
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-context.sh"
   },
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true
