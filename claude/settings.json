@@ -1,9 +1,8 @@
 {
   "permissions": {
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "auto"
   },
   "model": "opus",
-  "autoCompactWindow": 200000,
   "hooks": {
     "Stop": [
       {
