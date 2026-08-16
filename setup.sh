@@ -39,6 +39,8 @@ ln -f -s "$PWD/herdr/config.toml" ~/.config/herdr/config.toml
 mkdir -p ~/.claude
 ln -f -s "$PWD/claude/settings.json" ~/.claude/settings.json
 ln -f -s "$PWD/claude/statusline-context.sh" ~/.claude/statusline-context.sh
+ln -f -s "$PWD/claude/CLAUDE.md" ~/.claude/CLAUDE.md
+ln -f -s "$PWD/claude/RTK.md" ~/.claude/RTK.md
 
 if [[ $os = "Darwin" ]]
 then
